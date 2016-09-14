@@ -1,0 +1,6 @@
+@charset 'utf8';
+
+#header div[class^="col-"],
+#banners div[class^="col-"] {
+	outline: 1px dashed #666;
+}

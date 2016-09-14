@@ -1,0 +1,1298 @@
+2016-09-09 17:04:24 Error: [MissingControllerException] Controller class AdministradoresController could not be found.
+Exception Attributes: array (
+  'class' => 'AdministradoresController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/administradores/crear
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-09 17:06:03 Error: [MissingControllerException] Controller class BackendController could not be found.
+Exception Attributes: array (
+  'class' => 'BackendController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/backend/css/icheck/skins/flat/red.css
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-09 17:06:52 Error: [MissingControllerException] Controller class BackendController could not be found.
+Exception Attributes: array (
+  'class' => 'BackendController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/backend/js/custom.js
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-09 17:06:55 Error: [MissingControllerException] Controller class BackendController could not be found.
+Exception Attributes: array (
+  'class' => 'BackendController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/backend/js/custom.js
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-09 18:11:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /volvo/busandtrucks/sitio/admin/categorias/add
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `vo...', Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1024): DboSource->execute('INSERT INTO `vo...')
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Model.php(1933): DboSource->create(Object(Categoria), Array, Array)
+#4 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 D:\wamp\www\volvo\busandtrucks\sitio\Controller\CategoriasController.php(19): Model->save(Array)
+#6 [internal function]: CategoriasController->admin_add()
+#7 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#8 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#10 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-12 11:22:17 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 11:36:50 Error: [MissingViewException] View file "Categorias\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\index.ctp',
+)
+Request URL: /volvo/busandtrucks/sitio/
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-12 11:36:51 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 11:38:21 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 15:44:51 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:25:23 Error: Fatal Error (1): Call to a member function find() on null in [D:\wamp\www\volvo\busandtrucks\sitio\Model\Producto.php, line 141]
+2016-09-12 17:25:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /volvo/busandtrucks/sitio/admin/productos/desactivar/2
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 141)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 141, Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 141, Array)
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-12 17:34:10 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:35:48 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:38:48 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:38:54 Error: [MissingActionException] Action CategoriasController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'CategoriasController',
+  'action' => 'view',
+)
+Request URL: /volvo/busandtrucks/sitio/categorias/view/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#2 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-12 17:38:54 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:38:56 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:39:17 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:39:38 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:40:42 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:10 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:11 Error: [MissingActionException] Action CategoriasController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'CategoriasController',
+  'action' => 'view',
+)
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#2 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-12 17:41:12 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:29 Error: [MissingViewException] View file "Categorias\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\view.ctp',
+)
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-12 17:41:30 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:46 Error: [MissingViewException] View file "Categorias\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\view.ctp',
+)
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-12 17:41:47 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:47 Error: [MissingViewException] View file "Categorias\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\view.ctp',
+)
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-12 17:41:48 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:48 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:49 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:41:51 Error: [MissingViewException] View file "Categorias\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\view.ctp',
+)
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-12 17:41:51 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:42:08 Error: [MissingViewException] View file "Categorias\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Categorias\\view.ctp',
+)
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#4 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-12 17:42:08 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:43:24 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:43:36 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:49:29 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:52:01 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:53:08 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:53:15 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:53:40 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:54:13 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 17:55:21 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:36:09 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:45:43 Error: Fatal Error (1): Call to a member function find() on null in [D:\wamp\www\volvo\busandtrucks\sitio\Controller\CategoriasController.php, line 11]
+2016-09-12 18:45:43 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /volvo/busandtrucks/sitio/
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 11, Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 11, Array)
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-12 18:45:44 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:46:23 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:46:40 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:46:42 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:48:02 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-12 18:48:08 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 10:32:45 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 10:32:50 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 10:33:18 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 10:55:06 Error: Fatal Error (1): Call to a member function find() on null in [D:\wamp\www\volvo\busandtrucks\sitio\Controller\ProductosController.php, line 12]
+2016-09-13 10:55:06 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /volvo/busandtrucks/sitio/categoria/motores
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 12, Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 12, Array)
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-13 10:55:07 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 10:59:34 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:17:06 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:19:28 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:22:06 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:23:21 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:23:36 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:32:31 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:50:10 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:50:18 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 11:58:02 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:03:12 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:07:48 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:08:11 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:08:15 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:08:15 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:13:09 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:16:19 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:17:04 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:46:14 Error: Fatal Error (1): Call to a member function conteoProductos() on null in [D:\wamp\www\volvo\busandtrucks\sitio\Model\Producto.php, line 229]
+2016-09-13 12:46:14 Error: [FatalErrorException] Call to a member function conteoProductos() on null
+Request URL: /volvo/busandtrucks/sitio/admin/productos/desactivar/2
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 229)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 229, Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\wamp\\www\\vol...', 229, Array)
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-13 12:47:37 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:48:18 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 12:48:18 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:57:09 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:07 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:18 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:25 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:27 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:28 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:51 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:55 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 13:59:57 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 14:00:31 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 14:01:13 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 14:01:16 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 14:01:21 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 14:01:25 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 14:01:31 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:01:10 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:01:11 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:01:19 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:08:39 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:09:50 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:10:00 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:10:03 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:10:05 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:10:07 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 16:10:08 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:30:50 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:31:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'PRIMARY'
+Request URL: /volvo/busandtrucks/sitio/admin/categorias/edit/3
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('UPDATE `volvo_b...', Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Datasource\Database\Mysql.php(415): DboSource->execute('UPDATE `volvo_b...')
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Model.php(1917): Mysql->update(Object(Categoria), Array, Array)
+#4 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 D:\wamp\www\volvo\busandtrucks\sitio\Model\Categoria.php(133): Model->save(Array, Array)
+#6 D:\wamp\www\volvo\busandtrucks\sitio\Model\Categoria.php(110): Categoria->updateCounter()
+#7 [internal function]: Categoria->afterSave(false, Array)
+#8 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Event\CakeEventManager.php(241): call_user_func_array(Array, Array)
+#9 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Model.php(1961): CakeEventManager->dispatch(Object(CakeEvent))
+#10 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#11 D:\wamp\www\volvo\busandtrucks\sitio\Controller\CategoriasController.php(53): Model->save(Array)
+#12 [internal function]: CategoriasController->admin_edit('3')
+#13 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#14 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#16 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2016-09-13 17:52:25 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:52:43 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:52:54 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:53:05 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:53:19 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:56:57 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 17:57:05 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:04:48 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:04:50 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:04:51 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:04:52 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:04:53 Error: [MissingActionException] Action ProductosController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'view',
+)
+Request URL: /volvo/busandtrucks/sitio/productos/view
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-13 18:04:54 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:04:55 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:07:19 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:07:36 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:07:38 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:26:20 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:26:52 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:26:55 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:26:57 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:26:59 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:27:00 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:27:01 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:27:03 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:55:20 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:55:21 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:56:46 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:58:28 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in [D:\wamp\www\volvo\busandtrucks\sitio\View\Productos\index.ctp, line 7]
+2016-09-13 18:58:28 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+Request URL: /volvo/busandtrucks/sitio/categoria/filtros
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\wamp\\www\\vol...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\wamp\\www\\vol...', 7, Array)
+#2 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\wamp\\www\\vol...', 7, Array)
+#3 D:\wamp\www\volvo\busandtrucks\sitio\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-13 18:58:29 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:58:41 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-13 18:59:02 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-14 12:24:53 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /volvo/busandtrucks/sitio/favicon.ico
+Stack Trace:
+#0 D:\wamp\www\volvo\busandtrucks\sitio\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
