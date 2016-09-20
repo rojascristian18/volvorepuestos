@@ -13,7 +13,7 @@
 		<?= $this->Html->scriptBlock(sprintf("var webroot = '%s';", $this->webroot)); ?>
 		<?= $this->Html->scriptBlock(sprintf("var fullwebroot = '%s';", $this->Html->url('/', true))); ?>
 		<?= $this->Html->script(array(
-			//'jquery-1.11.3.min', 'bootstrap.min'
+			'jquery.min', 'bootstrap.min', 'app'
 		)); ?>
 		<?= $this->fetch('meta'); ?>
 		<?= $this->fetch('css'); ?>

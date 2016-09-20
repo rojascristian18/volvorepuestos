@@ -4,3 +4,47 @@
 #banners div[class^="col-"] {
 	outline: 1px dashed #666;
 }
+
+/**
+* Filtro home
+*/
+div.categorias div.filtro {
+	overflow: hidden;
+	position: relative;
+}
+
+div.categorias div.filtro .filtro-categoria {
+	position: relative;
+	display: block;
+	-webkit-transition: left .35s ease-out;
+	   -moz-transition: left .35s ease-out;
+	    -ms-transition: left .35s ease-out;
+	     -o-transition: left .35s ease-out;
+	        transition: left .35s ease-out;
+}
+
+div.categorias div.filtro .filtro-modelos {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 25px;
+	-webkit-transition: left .35s ease-out;
+	   -moz-transition: left .35s ease-out;
+	    -ms-transition: left .35s ease-out;
+	     -o-transition: left .35s ease-out;
+	        transition: left .35s ease-out;
+}
+
+div.categorias div.filtro .filtro-modelos .atras-filtro {
+	display: block;
+	margin: 25px auto;
+}
+
+div.categorias div.filtro .filtro-categoria.activa, div.categorias div.filtro .filtro-modelos.activa {
+	left: 0;
+}
+
+div.categorias div.filtro .filtro-modelos.oculta , div.categorias div.filtro .filtro-categoria.oculta {
+	left: -100%;
+}

@@ -8,7 +8,10 @@ class CategoriasController extends AppController
 			'conditions'		=> array('Categoria.producto_activo_count >' => 0)
 		));
 
-		$modelos			= $this->Categoria->Producto->Version->Modelo->find('list');
+		$modelos			= $this->Categoria->Producto->Version->Modelo->find('all', array(
+			'conditions'	=> array('Modelo.producto_activo_count >' => 0, 'Modelo.version_activo_count >' => 0)
+			)
+		);
 		$this->set(compact('categorias', 'modelos'));
 	}
 

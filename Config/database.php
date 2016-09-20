@@ -6,8 +6,8 @@ class DATABASE_CONFIG
 		'persistent'	=> false,
 		'host'			=> 'localhost',
 		'login'			=> 'root',
-		'password'		=> 'brandon:2016',
-		'database'		=> 'volvo_busandtrucks',
+		'password'		=> '',
+		'database'		=> 'volvo_repuestos',
 		'prefix'		=> 'sitio_',
 		'encoding'		=> 'utf8'
 	);
