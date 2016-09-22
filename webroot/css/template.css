@@ -1,0 +1,1649 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/****************************************************************************************************
+general
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    font-family: "OpenSans Regular";    
+}
+
+html{
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden;
+	background-color: #ffffff; 
+}
+
+html, body {
+	font-size: 100%;
+	min-width: 240px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: #ffffff;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	background-color: #ffffff;
+	font-weight: 300;
+	min-width: 240px;
+}
+
+a {
+
+	border-style: none;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	border-style: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div, a, img {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+div:focus, a:focus, img:focus {
+	outline: 0;
+}
+
+.link {
+	cursor: pointer;
+}
+
+.animated {
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.animate-up{
+
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+    -moz-opacity: .6;
+    -khtml-opacity: .6;
+    -webkit-opacity: .6;
+    opacity: .6;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+    filter: alpha(opacity=60);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+}
+.break {
+	width: 0px;
+	height: 0px;
+	visibility: hidden;
+	clear: both;
+}
+
+div#debug-kit-toolbar {
+	/*display: none;*/
+}
+
+.Nopadding-left{
+        padding-left: 0;
+}
+.Nopadding-right{
+        padding-right: 0;
+}
+
+
+
+
+.btn {
+    border-radius: 0px;
+}
+
+/****************************************************************************************************
+HEADER
+*/
+
+div#header {
+	width: 100%;
+	height: auto;
+	/*overflow: hidden;*/
+	/*position: fixed;*/
+	top: 0px;
+	background-color: #ffffff;
+	z-index: 100;
+	color:#000;
+}
+
+div#header  div#franja {
+	background: #000;
+	width: 100%;
+	height: 15px;
+}
+
+
+/**
+seccion-sup
+**/
+
+div#header div#seccion-sup{
+    height: 120px;
+    background: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+div#header div#seccion-sup div#logos img {
+    max-height: 80px;
+    float: left;
+}
+
+
+div#header div#seccion-sup div#logos .logo-text{
+    float: left;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 200px;
+
+}
+div#header div#seccion-sup div#logos .logo-text .logo-texto-1{
+	text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000;
+}
+div#header div#seccion-sup div#logos .logo-text .logo-texto-2{
+	text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #000;
+}
+
+div#header div#seccion-sup div#search {
+	margin-top: 25px;
+}
+
+
+/**
+seccion inf
+**/
+
+div#header div#seccion-inf{
+	/*
+    background: red;
+    height: 100px;
+    */
+}
+div#header div#seccion-inf .navbar-default {
+	background-color: #D7D7D7;
+    border-color: transparent;
+    border-radius: inherit;
+    margin-bottom: 0px;
+}
+
+div#header div#seccion-inf .navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #4A4C52;
+    font-weight: bold;
+    margin-right: 45px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #fff;
+}
+ 
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #fff;
+} 
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+div#header div#seccion-inf ul#submenu-cat{
+    position: absolute;
+    width: 1182px;
+    left: -122px;
+    border: none!important;
+    border: none;
+    box-shadow: none;
+
+}
+div#header div#seccion-inf ul#submenu-cat a{
+    width: 120px;
+    display: block;
+    height: 160px;
+    float: left;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+
+   
+}
+
+
+div#header div#seccion-inf ul#submenu-cat div.lateral{
+    max-width: 250px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+    /*border: solid;*/
+}
+div#header div#seccion-inf ul#submenu-cat div.lateral a{
+    height: 30px;
+    width: 100%;
+    color: #1a1a1a;
+    text-decoration: none;
+    line-height: 25px;
+    text-align: left;
+}
+/*
+div#header div#seccion-inf img {
+    float: left;
+}*/
+
+
+/****************************************************************************************************
+CONTENT
+*/
+/*
+
+div#content {
+    width: 100%;
+    padding-bottom: 30px;
+    background: green;
+    position: absolute;
+    margin-top: 100px;
+}
+*/
+
+
+/****************************************************************************************************
+BANNER
+*/
+
+div#banner {
+	margin: 0 auto;
+}
+
+div#banner a.carousel-control {
+	width: 8%;
+}
+
+div#banner a.carousel-control.left {
+    background-image:none!important;
+    filter: none;
+}
+div#banner a.carousel-control.right {
+    background-image:none!important;
+    filter: none;
+}   
+
+/****************************************************************************************************
+FILTROLEFT
+*/
+
+div#filtroleft div.form{
+    padding: 10px;
+    height: auto;
+    background: #e7e7e7;
+    pointer-events: all;
+    text-align: center;    
+}	
+
+div#filtroleft div.form h2{
+    font-family: "OpenSans Regular";
+    font-size: 18px;
+    color: #4A4C52;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 20px;    
+}
+div#filtroleft div.form .form-control {
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding: 0px 10px;
+    background: #ffffff;
+    border: solid 1px #EDEDED;
+    border-radius: 1px;
+    font-size: 14px;
+    color: #3f3f3f;
+    border: none !important;
+    font-family: "OpenSans Regular";
+    background-color: #fff;
+    box-shadow: none;
+}
+div#filtroleft div.form .btn-default{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #adadad; 
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px 10px;
+    letter-spacing: 2px;    
+}
+div#filtroleft div.form .btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+} 
+
+
+
+
+div#filtroleft div.form ul{
+}
+div#filtroleft div.form ul>li{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding: 0px 10px;
+    border: solid 1px #EDEDED;
+    border-radius: 1px;
+    font-size: 14px;
+    border: none !important;
+    box-shadow: none;   
+}
+div#filtroleft div.form ul>li>a{
+    font-family: "OpenSans Regular";
+    color: #4A4C52;
+
+}
+div#filtroleft div.form ul>li>a:hover{
+    color: #23527c;
+    font-weight: bold;
+    
+}
+div#filtroleft div.form ul>li>a>span{
+    font-weight: bold;
+}
+
+
+/****************************************************************************************************
+FORMULARIO
+*/
+
+div#wrapper-formulario {
+	display: block;
+	top: 75px;
+	z-index: 10;
+	width: 100%;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+div#titulo-formulario a {
+    background: #e7e7e7;
+    text-align: center;
+    font-size: 25px;
+    font-family: "VolvoBroad";
+    color: #4A4C52;
+    display: block;
+    height: 25px;
+    line-height: 40px;
+    pointer-events: all;
+    text-decoration: none;
+    cursor:default;
+}
+
+div#titulo-formulario a.tel {
+    font-size: 50px;
+    font-family: "VolvoBroad";
+    height: 60px;
+    line-height: 55px;
+    pointer-events: all;
+    letter-spacing: 2px;
+}
+
+div#titulo-formulario a i {
+	font-size: 24px;
+	margin-right: 15px;
+}
+
+div#contenedor-formulario {
+	height: 0px;
+	overflow: hidden;
+}
+
+div#contenedor-formulario.active {
+	height: auto;
+}
+
+div#contenedor-formulario div.form {
+    padding: 10px 40px 40px 40px;
+    height: auto;
+    background: #e7e7e7;
+    pointer-events: all;
+}
+
+div#contenedor-formulario div.form .form-group {
+	padding: 0px;
+	margin: 0px;
+	padding-bottom: 5px;
+}
+
+div#contenedor-formulario div.form label {
+	display: block;
+	margin: 0px !important;
+	margin-bottom: 2px;
+	font-size: 12px;
+	color: #3f3f3f;
+	font-weight: normal;
+}
+
+div#contenedor-formulario div.form .form-control {
+	width: 100%;
+	height: 26px;
+	margin: 0px;
+	padding: 0px 10px;
+	background: #ffffff;
+	border: solid 1px #EDEDED;
+	border-radius: 1px;
+	font-size: 11px;
+	color: #3f3f3f;
+	border: none !important;
+	font-family: "OpenSans Regular";
+	background-color: #fff;
+	box-shadow: none;
+
+}
+
+div#contenedor-formulario div.form .campo-corto {
+	width: 49%;
+	position: relative;
+}
+
+div#contenedor-formulario div.form .campo-corto-izq {
+	float: left;
+}
+
+div#contenedor-formulario div.form .campo-corto-der {
+	float: right;
+}
+
+div#contenedor-formulario div.form select {
+	padding: 0px 5px !important;
+	height: 26px !important;
+}
+
+div#contenedor-formulario div.form select option {
+	padding: 3px 7px;
+}
+
+div#contenedor-formulario div.form input[type="checkbox"] {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border: solid 1px #d9d9d9;
+	background: #ffffff;
+	margin: 0px;
+	cursor: pointer;
+	vertical-align: middle;
+	top: -1px;
+	display: inline-block;
+	margin-right: 5px;	
+}
+
+div#contenedor-formulario div.form span {
+	font-size: 11px;
+	color: #313131;
+	font-weight: normal;
+	line-height: 28px;
+	display: inline-block;
+}
+
+div#contenedor-formulario div.form textarea {
+	resize: none;
+	height: 58px !important;
+	padding: 5px 10px !important;
+}
+
+div#contenedor-formulario div.form div.contenedor-btn-enviar .btn-default{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #adadad;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px 30px;
+    letter-spacing: 2px;
+}
+div#contenedor-formulario div.form div.contenedor-btn-enviar .btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+}
+
+
+div#contenedor-formulario div.form label.error {
+	padding: 0px;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: 400;
+	margin-top: 2px;
+	color: #000000;
+}
+
+div#contenedor-formulario div.form .checkbox-inline {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px;
+	margin-top: 5px;
+}
+
+
+
+
+
+/****************************************************************************************************
+BREADCRUMB
+*/
+.breadcrumb {
+    padding: 10px 15px 5px 0px;
+    margin-bottom:0px;
+    list-style: none; 
+    background-color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.breadcrumb li{
+    font-family: "OpenSans Regular";
+    color: #4A4C52;
+    font-size: 10px;
+    margin-right: 5px;    
+}
+.breadcrumb li a{
+    text-decoration: none;
+    color: #4A4C52;
+}
+.breadcrumb>li+li:before {
+    padding: 0px;
+    color: #4A4C52;
+    content: "";
+}
+
+
+/****************************************************************************************************
+CATEGORÍAS
+*/
+
+div#categorias {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#categorias div#contenido-categorias {
+    background-color: #fff;
+}
+
+
+div#categorias div#contenido-categorias h3{
+    font-family: "OpenSans Semibold";
+    font-size: 14px;
+    color: #BFBFBF;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 0px!important;   
+}
+div#categorias div#contenido-categorias h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;    
+}
+
+div#categorias div#contenido-categorias a{
+    border: solid 2px #BFBFBF;
+    width: 100%;
+    height: 145px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+div#categorias div#contenido-categorias a img {
+    margin-right: 5px;
+    margin-bottom: 8px;
+    max-height: 140px;
+    float: left;
+}
+div#categorias div#contenido-categorias a div#titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 15px;
+}
+div#categorias div#contenido-categorias a div#titulo span {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    padding-bottom: 0px;
+    margin-top: 40px;
+    color: #01547C;    
+}
+div#categorias div#contenido-categorias a:hover div#titulo{
+    color: #01547C;
+}
+div#categorias div#contenido-categorias a:hover{
+    background: rgba(0,0,0,0.05);
+}
+
+
+/****************************************************************************************************
+CATALOGO
+*/
+
+div#catalogo {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#catalogo div#contenido-catalogo {
+    /*
+    background-color: red;
+    position: relative;
+    */
+}
+ 
+
+div#catalogo div#contenido-catalogo h1{
+    font-family: "OpenSans Regular";
+    font-size: 22px;
+    color: #4A4C52;
+
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 20px;  
+
+}
+
+
+div#catalogo div#contenido-catalogo a{
+    border: solid 2px #BFBFBF;
+    width: 100%;
+    /* height: 270px; */
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+div#catalogo div#contenido-catalogo a img {
+    max-height: 250px;
+    /* float: left; */
+    margin: 0 auto;
+    display: block;
+}
+div#catalogo div#contenido-catalogo a div#caja{
+
+    background: rgba(0,0,0, 0.06);
+    position: absolute;
+    z-index: 99999;
+    height: 40px;
+    width: 100%;
+    margin-left: 0px;
+    overflow: hidden;
+    bottom: 0;
+}
+div#catalogo div#contenido-catalogo a:hover div#caja{
+    height: 100px;
+}
+div#catalogo div#contenido-catalogo div#caja div.titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #01547C;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 20px; 
+    margin-left: 10px;   
+    margin-top: 10px;    
+}
+div#catalogo div#contenido-catalogo div#caja .btn-default{
+    font-family: "OpenSans Semibold";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #01547C;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 6px 10px;
+    letter-spacing: 2px;  
+    margin-left: 10px;   
+}
+div#catalogo div#contenido-catalogo div#caja .btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+} 
+
+
+
+
+
+/****************************************************************************************************
+PRODUCTOS
+*/
+
+div#producto {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#producto div#contenido-producto {
+    /*
+    background-color: red;
+    position: relative;
+    */
+}
+ 
+
+div#producto div#contenido-producto h1{
+    font-family: "OpenSans Regular";
+    font-size: 22px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 20px;  
+
+}
+
+
+div#producto div#contenido-producto a{
+    border: solid 2px #BFBFBF;
+    width: 100%;
+    /* height: 270px; */
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+div#producto div#contenido-producto a img {
+    max-height: 250px;
+    /* float: left; */
+    margin: 0 auto;
+    display: block;
+}
+div#producto div#contenido-producto a div#caja{
+
+    background: rgba(0,0,0, 0.06);
+    position: absolute;
+    z-index: 99999;
+    height: 35px;
+    width: 100%;
+    margin-left: 0px;
+    overflow: hidden;
+    bottom: 0;
+}
+div#producto div#contenido-producto a:hover div#caja{
+    height: 100px;
+}
+div#producto div#contenido-producto div#caja div.titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 18px; 
+    margin-left: 10px;   
+    margin-top: 10px;
+    font-weight: bold;    
+}
+div#producto div#contenido-producto div#caja div.descripcion{
+    font-family: "OpenSans Semibold";
+    font-size: 10px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 20px; 
+    margin-left: 10px;   
+    margin-top: 0px;    
+}
+div#producto div#contenido-producto div#caja div.precio{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #01547C;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    /* padding: 2px 15px; */
+    letter-spacing: 2px;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center;  
+}
+div#producto div#contenido-producto div#caja .precio:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+} 
+/****************************************************************************************************
+PRODUCTOS DETALLE
+*/
+
+div#producto-detalle {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#producto-detalle div#contenido-producto-detalle {
+    /*
+	background-color: red;
+    position: relative;
+    */
+}
+ 
+
+div#producto-detalle div#contenido-producto-detalle h1{
+    font-family: "OpenSans Regular";
+    font-size: 22px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 20px;  
+
+}
+
+
+div#producto-detalle div#contenido-producto-detalle div#imagen{
+    border: solid 2px #BFBFBF;
+    width: 100%;
+    /* height: 270px; */
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+div#producto-detalle div#contenido-producto-detalle div#imagen img {
+    margin: 0 auto;
+    display: block;
+}
+
+div#producto-detalle div#contenido-producto-detalle div#caja{
+
+    /*background: rgba(0,0,0, 0.06);*/
+    z-index: 99999;
+    width: 100%;  
+    margin-left: 0px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+
+div#producto-detalle div#contenido-producto-detalle div#caja div.titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 22px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin-left: 10px;
+    margin-top: 25px;
+    font-weight: bold;   
+}
+div#producto-detalle div#contenido-producto-detalle div#caja div.descripcion{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 20px;   
+}
+div#producto-detalle div#contenido-producto-detalle div#caja div.precio{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #01547C;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center; 
+    float: left;    
+}
+div#producto-detalle div#contenido-producto-detalle div#caja div..precio:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+} 
+div#producto-detalle div#contenido-producto-detalle div#caja a.cotizar{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #313131;
+    border-color: #01547C;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    width: 100px;
+    text-align: center; 
+    float: left;
+    cursor:pointer;
+}
+div#producto-detalle div#contenido-producto-detalle div#caja a.cotizar:hover {
+    color: #fff;
+    background-color: #01547C;
+    border-color: #adadad;
+} 
+
+
+
+/****************************************************************************************************
+SERVICIOS
+*/
+
+div#servicios {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+div#servicios div#contenido-servicios {
+    background-color: #fff;
+}
+
+
+div#servicios div#contenido-servicios h3{
+    font-family: "OpenSans Semibold";
+    font-size: 14px;
+    color: #BFBFBF;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 0px!important;   
+}
+div#servicios div#contenido-servicios h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;    
+}
+
+
+div#servicios div#contenido-servicios div#titulo{
+
+    font-family: "VolvoBroad";
+    font-size: 30px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    float: left;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+div#servicios div#contenido-servicios div#titulo span{
+    font-family: "OpenSans Regular";
+    color:#01547C;
+}
+
+
+.over:hover
+{
+box-shadow:
+1px 1px #53a7ea,
+2px 2px #53a7ea,
+3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
+
+/****************************************************************************************************
+CONCESIONARIOS
+*/
+
+div#concesionarios {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#concesionarios div#contenido-concesionarios {
+    background-color: #fff;
+}
+
+
+div#concesionarios div#contenido-concesionarios h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;   
+}
+div#concesionarios div#contenido-concesionarios p{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    /*text-transform: uppercase;*/
+    float: left; 
+    margin-left:0px;  
+}
+div#concesionarios div#contenido-concesionarios p{
+    font-family: "OpenSans Regular";
+    font-size: 13px;
+    color: #4A4C52;
+    text-align: left;
+    float: left;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+div#concesionarios div#contenido-concesionarios p span{
+     color: #01547C;
+     font-weight: bold;
+}
+div#concesionarios div#contenido-concesionarios h2{
+    font-family: "OpenSans Regular";
+    font-size: 14px;
+    font-weight: 600;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 10px;
+    /* margin-bottom: 20px!important; */
+}
+
+div#concesionarios div#contenido-concesionarios a{
+
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 0px;
+}
+
+div#concesionarios div#contenido-concesionarios a div#titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 15px;
+}
+
+div#concesionarios div#contenido-concesionarios a:hover h2{
+    font-family: "OpenSans Regular";
+    color: #01547C;
+    font-weight: bold!important;
+}
+
+div#concesionarios div#contenido-concesionarios a:hover p{
+    color: #01547C;
+}
+
+/****************************************************************************************************
+POSTVENTA
+*/
+
+div#postventa {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#postventa div#contenido-postventa {
+    background-color: #fff;
+}
+
+
+div#postventa div#contenido-postventa h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;   
+}
+div#postventa div#contenido-postventa p{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    /*text-transform: uppercase;*/
+    float: left; 
+    margin-left:0px;  
+}
+div#postventa div#contenido-postventa p{
+    font-family: "OpenSans Regular";
+    font-size: 13px;
+    color: #4A4C52;
+    text-align: left;
+    /* text-transform: uppercase; */
+    float: left;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+div#postventa div#contenido-postventa p span{
+     color: #01547C;
+     font-weight: bold;
+}
+div#postventa div#contenido-postventa h2{
+    font-family: "OpenSans Regular";
+    font-size: 14px;
+    font-weight: 600;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px!important;
+}
+
+div#postventa div#contenido-postventa a{
+
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 0px;
+}
+
+div#postventa div#contenido-postventa a div#titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 15px;
+}
+
+div#postventa div#contenido-postventa a:hover h2{
+    font-family: "OpenSans Regular";
+    color: #01547C;
+    font-weight: bold!important;
+}
+
+div#postventa div#contenido-postventa a:hover p{
+    color: #01547C;
+}
+
+div#postventa div#contenido-postventa .btn-default{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #adadad;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px 30px;
+    letter-spacing: 2px;
+}
+div#postventa div#contenido-postventa .btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+}
+
+
+
+
+/****************************************************************************************************
+PAGINADOR
+*/
+
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 10px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #919191;
+    text-decoration: none;
+    background-color: none!important;
+    border: none!important;
+    width: auto!important;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #01547C;
+    font-weight: bold;
+    cursor: default;
+    background-color:transparent!important;    
+    border-color: #337ab7;
+}   
+
+.pagination>li>a>i.fa {
+    
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+
+
+/****************************************************************************************************
+FOOTER
+*/
+
+div#footer {
+    width: 100%;
+    height: 180px;
+    position: relative;
+
+}
+div#footer div.top{
+
+    background-color: #eee;
+    font-family: "OpenSans Light";
+    font-size: 12px;
+    line-height: 30px;
+    color: #ffffff;
+    bottom: 0px;
+    z-index: 100;
+    height: 180px;
+}    
+div#footer div.top img{
+    margin-top: 50px;
+}
+div#footer div.midle{
+    background-color: #000;
+    height: 50px;
+    font-family: "OpenSans Light";
+    font-size: 14px;
+    line-height: 50px;
+    color: #ffffff;
+}
+div#footer div.bottom{
+    background-color: #fff;
+    font-family: "OpenSans Light";
+    font-weight: bold;
+    font-size: 12px;
+    height: 100px;
+    line-height: 100px;
+    color: #4A4C52;
+    bottom: 0px;
+    z-index: 100
+}
+div#footer div.bottom img{
+    max-height: 80px;
+}
+
+
+
+/****************************************************************************************************
+VENTANA DE MENSAJE
+*/
+
+div#wrapper-ventana {
+  position: fixed;
+  width: auto;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10000;
+  display: none;
+}
+
+div#wrapper-ventana div#ventana {
+  position: absolute;
+  display: block;
+  width: 270px;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  margin-left: -135px;
+  background: #ffffff;
+  border: solid 2px #01547c;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+div#wrapper-ventana div#ventana p#mensaje {
+  color: #313131;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  padding: 10px;
+} 
+
+div#wrapper-ventana div#ventana p#mensaje b {
+  font-weight: normal;
+}
+
+div#wrapper-ventana div#ventana div#btn-cerrar {
+  text-align: right;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+div#wrapper-ventana div#ventana div#btn-cerrar a {
+	background-color: #01547c;
+    border: medium none;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px 15px;
+    text-transform: none;
+    display: inline-block;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+div#wrapper-ventana div#ventana div#btn-cerrar a:hover {
+  opacity: 1;
+}
+
+div#wrapper-ventana div#ventana input#focus-ventana {
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  opacity: 1;
+  display: block;
+}
+
+
+
+/****************************************************************************************************
+RESPONSIVE
+Large Devices, Wide Screens
+bootstrap container: 1170px
+col-lg
+*/
+@media only screen and (min-width : 1170px) {
+}
+
+
+
+/****************************************************************************************************
+RESPONSIVE
+Large Devices, Wide Screens
+bootstrap container: 970px
+col-md
+*/
+@media only screen and (max-width : 1170px) {
+
+
+
+}
+
+
+
+/****************************************************************************************************
+RESPONSIVE
+Medium Devices, Desktops
+bootstrap container: 750px
+col-sm
+*/
+@media only screen and (max-width : 992px) {
+
+
+    .Nopadding-left{
+            padding-left: 0;
+            padding-right: 0;
+    }
+    .Nopadding-right{
+            padding-left: 0;
+            padding-right: 0;
+    }
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    
+
+    div#header div#seccion-inf .navbar-nav>li>a {
+        margin-right: 0px;
+    }    
+    div#header div#seccion-inf .navbar-default {
+        background-color: #fff;
+        border: none;
+        border-radius: inherit;
+        margin-bottom: 10px;
+    }
+    /*
+	div#header div#seccion-inf {
+	    height: 80px;
+	    background: #fff;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    display: block;
+	}*/
+    div#header div#seccion-inf a.navbar-brand {
+        float: left;
+        height: 60px;
+        padding: 5px 5px;
+
+    }
+	div#header div#seccion-inf a.navbar-brand img {
+	    max-height: 55px;
+	    float: left;
+	}
+
+	div#header div#seccion-inf a.navbar-brand .logo-text{
+        float: left;
+        margin-top: 5px;
+        margin-left: 0px;
+        width: 170px;
+	}
+	div#header div#seccion-inf a.navbar-brand .logo-text .logo-texto-1{
+	    text-transform: uppercase;
+	    font-size: 18px;
+	    font-weight: bold;
+	    margin-top: 10px;
+	    color: #000;
+	}
+	div#header div#seccion-inf a.navbar-brand .logo-text .logo-texto-2{
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    margin-top: 5px;
+	    color: #000;
+	}
+    div#header div#seccion-inf ul#submenu-cat {
+        /* position: absolute; */
+        width: 100%;
+        left: 0px;
+        border: none!important;
+        border: solid 1px #ccc!important;
+        box-shadow: none;
+        background-color: #fff;
+    }
+
+
+    div#header div#seccion-inf ul#submenu-cat a {
+        width: 100px;
+        display: block;
+        height: 150px;
+        float: left;
+        text-align: center;
+        color: #000;
+        text-transform: uppercase;
+        margin-left: 30px;
+        font-size: 12px
+    } 
+    div#header div#seccion-inf div.navbar-collapse.in {
+        overflow-y: inherit!important;
+    }
+
+    div#header div#seccion-inf ul#submenu-cat div.lateral {
+        max-width: 250px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 20px;
+        /* border: solid; */
+    }    
+
+    div#footer div.top {
+        height: 100px;
+    }
+
+    div#footer div.top img {
+        margin-top: 25px;
+        max-width: 55px;
+    }
+    div#footer div.midle {
+        font-size: 12px;
+    }
+
+    div#footer div.bottom {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    div#footer div.bottom img {
+        max-height: 40px;
+    }
+
+}
+
+
+
+/****************************************************************************************************
+RESPONSIVE
+Small Devices, Tablets
+bootstrap container: 100%
+col-xs
+*/
+@media only screen and (max-width : 768px) {
+	/*
+	div#header {
+		position: relative;
+		height: auto;
+
+	}
+
+	div#header div#logos {
+		text-align: center;
+	}
+
+	div#header div#direccion {
+		font-size: 10px;
+		padding-top: 13px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	div#header div#mantencion {
+		text-align: center;
+	}
+
+	div#header div#mantencion a {
+		margin-top: 5px;
+	}
+
+	div#header div#telefono {
+		text-align: center;
+	}
+
+	div#header div#telefono a {
+		font-size: 18px;
+	}
+
+	div#content {
+		padding: 0px;
+	}
+
+	div#titulo div#contenido-titulo h1 {
+		height: auto;
+		font-size: 18px;
+		line-height: 24px;
+		padding: 10px 0px;
+	}
+
+	div#categorias div#contenido-categorias a {
+		margin-right: 0px;
+		display: block;
+	}
+
+	div#modelos div.contenido-modelos {
+		text-align: center;
+	}
+
+	div#modelos div.contenido-modelos a {
+		width: 136px;
+	}
+
+	div#footer {
+		position: relative;
+	}
+	*/
+
+}
+
+
+
+/****************************************************************************************************
+RESPONSIVE
+Extra Small Devices, Phones
+bootstrap container: 100%
+col-xs
+*/
+@media only screen and (max-width : 480px) {
+
+	div#header div#logos {
+		width: 100%;
+	}
+
+}

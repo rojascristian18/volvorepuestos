@@ -25,6 +25,7 @@ class AppController extends Controller
 			)
 		),
 		'DebugKit.Toolbar',
+		'Carro'
 		//'Facebook.Connect'	=> array('model' => 'Usuario'),
 		//'Facebook'
 	);
@@ -81,14 +82,28 @@ class AppController extends Controller
 		if ( ! isset($this->request->params['admin']) )
 		{
 			$busqueda		= array(
-				'categorias'		=> ClassRegistry::init('Categoria')->find('list', array(
-					'conditions'		=> array('Categoria.producto_activo_count >' => 0)
+				'categorias'		=> ClassRegistry::init('Categoria')->find('all', array(
+					'conditions'		=> array('Categoria.producto_activo_count >' => 0),
+					'fields'			=> array('Categoria.slug', 'Categoria.nombre')
 				)),
-				'modelos'			=> ClassRegistry::init('Modelo')->find('list', array(
-					'conditions'		=> array('Modelo.producto_activo_count >' => 0)
+				'modelos'			=> ClassRegistry::init('Modelo')->find('all', array(
+					'conditions'		=> array('Modelo.producto_activo_count >' => 0),
+					'fields'			=> array('Modelo.slug', 'Modelo.nombre')
 				))
 			);
-			$this->set(compact('busqueda'));
+
+			$slugsCategorias = array();
+			$slugsModelos	= array();
+
+			foreach ($busqueda['categorias'] as $categoria) {
+				$slugsCategorias[$categoria['Categoria']['slug']] = $categoria['Categoria']['nombre'];
+			}
+
+			foreach ($busqueda['modelos'] as $modelo) {
+				$slugsModelos[$modelo['Modelo']['slug']] = $modelo['Modelo']['nombre'];
+			}
+		
+			$this->set(compact('slugsCategorias', 'slugsModelos'));
 		}
 	}
 

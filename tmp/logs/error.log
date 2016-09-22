@@ -1622,3 +1622,481 @@ Request URL: /busandtrucks/js/jquery-1.11.3.min.js
 Stack Trace:
 #0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-09-20 17:26:55 Error: [MissingControllerException] Controller class CategoriaController could not be found.
+Exception Attributes: array (
+  'class' => 'CategoriaController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/categoria/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-20 17:33:12 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\wamp\www\busandtrucks\Controller\AppController.php, line 94]
+2016-09-20 17:33:12 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /busandtrucks/categoria/motores
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 94)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 94, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 94, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 09:39:18 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\wamp\www\busandtrucks\Controller\ProductosController.php, line 624]
+2016-09-21 09:39:18 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /busandtrucks/productos/carro/2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 624)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 624, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 624, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 09:39:44 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 09:41:11 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 09:51:46 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 09:57:01 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/3
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 09:57:44 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/3
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 10:17:41 Error: Fatal Error (4): syntax error, unexpected '$id' (T_VARIABLE) in [C:\wamp\www\busandtrucks\Controller\ProductosController.php, line 618]
+2016-09-21 10:17:42 Error: [FatalErrorException] syntax error, unexpected '$id' (T_VARIABLE)
+Request URL: /busandtrucks/productos/carro/2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 618)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 618, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 618, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 10:52:40 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/3
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 10:52:44 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro/3
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 10:54:13 Error: [MissingViewException] View file "Productos\agregarcarro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\agregarcarro.ctp',
+)
+Request URL: /busandtrucks/productos/agregarcarro/3
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 10:59:39 Error: [MissingViewException] View file "Productos\vaciar_carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciar_carro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarCarro/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 11:13:46 Error: [MissingActionException] Action ProductosController::busqueda() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'busqueda',
+)
+Request URL: /busandtrucks/productos/busqueda
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-21 11:24:21 Error: [MissingActionException] Action ProductosController::busqueda() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'busqueda',
+)
+Request URL: /busandtrucks/productos/busqueda
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-21 11:27:22 Error: [MissingViewException] View file "Productos\vaciarcarro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciarcarro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarcarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 11:42:56 Error: [MissingActionException] Action ProductosController::carro() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'carro',
+)
+Request URL: /busandtrucks/productos/carro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-21 12:14:31 Error: [MissingActionException] Action ProductosController::carro() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'carro',
+)
+Request URL: /busandtrucks/productos/carro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-21 12:16:03 Error: [MissingViewException] View file "Productos\agregarcarro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\agregarcarro.ctp',
+)
+Request URL: /busandtrucks/productos/agregarcarro/1
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 12:43:00 Error: [MissingViewException] View file "Productos\vaciar_carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciar_carro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarCarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 12:51:44 Error: [MissingViewException] View file "Productos\vaciar_carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciar_carro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarCarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 12:54:02 Error: [MissingViewException] View file "Productos\vaciar_carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciar_carro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarCarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 12:56:51 Error: [MissingViewException] View file "Productos\vaciar_carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciar_carro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarCarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 12:56:58 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 12:57:05 Error: [MissingViewException] View file "Productos\carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\carro.ctp',
+)
+Request URL: /busandtrucks/productos/carro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 13:01:48 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\busandtrucks\Controller\ProductosController.php, line 665]
+2016-09-21 13:01:48 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /busandtrucks/productos/carro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 665)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 665, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 665, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 13:01:50 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\busandtrucks\Controller\ProductosController.php, line 665]
+2016-09-21 13:01:50 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /busandtrucks/productos/totalcarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 665)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 665, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 665, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 14:58:15 Error: [MissingViewException] View file "Productos\vaciar_carro.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Productos\\vaciar_carro.ctp',
+)
+Request URL: /busandtrucks/productos/vaciarCarro
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#4 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-21 15:13:58 Error: Fatal Error (1): Call to undefined method View::obtenerCategorias() in [C:\wamp\www\busandtrucks\View\Elements\filtro.ctp, line 18]
+2016-09-21 15:13:58 Error: [FatalErrorException] Call to undefined method View::obtenerCategorias()
+Request URL: /busandtrucks/productos/index/slug:filtros/modelo:1
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\bus...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp\\www\\bus...', 18, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp\\www\\bus...', 18, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 15:14:13 Error: Fatal Error (1): Call to undefined function obtenerCategorias() in [C:\wamp\www\busandtrucks\View\Elements\filtro.ctp, line 18]
+2016-09-21 15:14:13 Error: [FatalErrorException] Call to undefined function obtenerCategorias()
+Request URL: /busandtrucks/productos/index/slug:filtros/modelo:1
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\bus...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp\\www\\bus...', 18, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp\\www\\bus...', 18, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 16:05:17 Error: [MissingPluginException] Plugin Producto could not be found.
+Exception Attributes: array (
+  'plugin' => 'Producto',
+)
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(227): CakePlugin::path('Producto')
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(549): App::path('Model', 'Producto')
+#2 [internal function]: App::load('index')
+#3 [internal function]: spl_autoload_call('index')
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Utility\ClassRegistry.php(146): class_exists('index')
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\Helper\FormHelper.php(171): ClassRegistry::init('Producto.index', true)
+#6 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\Helper\FormHelper.php(204): FormHelper->_getModel('Producto.index')
+#7 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\Helper\FormHelper.php(354): FormHelper->_introspectModel('Producto.index', 'key')
+#8 C:\wamp\www\busandtrucks\View\Categorias\index.ctp(20): FormHelper->create('Producto.index', Array)
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(971): include('C:\\wamp\\www\\bus...')
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp\\www\\bus...', Array)
+#11 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\View\View.php(473): View->_render('C:\\wamp\\www\\bus...')
+#12 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#15 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-09-21 16:25:15 Error: [MissingActionException] Action ProductosController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'view',
+)
+Request URL: /busandtrucks/productos/view
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-21 17:19:19 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Component\PaginatorComponent.php, line 341]
+2016-09-21 17:19:19 Error: [FatalErrorException] Unsupported operand types
+Request URL: /busandtrucks/productos/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\wamp\\www\\bus...', 341)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\wamp\\www\\bus...', 341, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\wamp\\www\\bus...', 341, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 17:19:20 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Component\PaginatorComponent.php, line 341]
+2016-09-21 17:19:20 Error: [FatalErrorException] Unsupported operand types
+Request URL: /busandtrucks/productos/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\wamp\\www\\bus...', 341)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\wamp\\www\\bus...', 341, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\wamp\\www\\bus...', 341, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-21 17:29:00 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/OpenSans-Regular.ttf
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-21 17:29:49 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/OpenSans-Regular.ttf
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-21 17:30:58 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/OpenSans-Regular.ttf
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-21 17:31:04 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/OpenSans-Regular.ttf
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-21 17:31:52 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/OpenSans-Regular.ttf
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-21 17:43:25 Error: [MissingControllerException] Controller class FiltroController could not be found.
+Exception Attributes: array (
+  'class' => 'FiltroController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/filtro/1
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-21 17:43:47 Error: [MissingActionException] Action ProductosController::filtros() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'filtros',
+)
+Request URL: /busandtrucks/productos/filtros/1
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-21 17:54:34 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\busandtrucks\Controller\ProductosController.php, line 269]
+2016-09-21 17:54:34 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /busandtrucks/productos/index/slug:filtros/model:vm
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 269)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 269, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 269, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-22 09:18:45 Error: Fatal Error (4): syntax error, unexpected ':' in [C:\wamp\www\busandtrucks\View\Productos\index.ctp, line 6]
+2016-09-22 09:18:45 Error: [FatalErrorException] syntax error, unexpected ':'
+Request URL: /busandtrucks/productos/filtros/fh
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 6, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 6, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

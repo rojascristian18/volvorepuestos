@@ -103,9 +103,9 @@ class CarroComponent extends Component
 			));
 		}
 
-		/**
-		 * Actualiza la informacion de peso si es necesario
-		 */
+		/*
+		  Actualiza la informacion de peso si es necesario
+		 
 		if ( $this->peso )
 		{
 			$peso			= (int) Hash::extract($data, $this->peso)[0];
@@ -114,7 +114,7 @@ class CarroComponent extends Component
 					'Peso'			=> $peso
 				)
 			));
-		}
+		}*/
 
 		/**
 		 * Agrega el producto al carro

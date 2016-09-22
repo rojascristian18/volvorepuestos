@@ -3,12 +3,18 @@ App::uses('AppController', 'Controller');
 class ProductosController extends AppController
 {
 	public function index()
-	{
+	{	
 		/**
 		 * Opciones de paginacion
 		 */
 		$paginate		= array(
 			'contain'		=> array(
+				'Categoria'		=> array(
+					'fields'		=> array(
+						'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+						'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+					)
+				),
 				'Version'		=> array(
 					'Modelo'		=> array(
 						'fields'		=> array(
@@ -23,365 +29,34 @@ class ProductosController extends AppController
 		);
 
 
-		// Filtrado de productos por post
+		// Filtrado de productos por formulario
 		if ( $this->request->is('post') ) {
 
 			/**
-			* Obtiene las categorías por el slug
+			* Lista los productos por categoria y modelo
 			*/
-			if ( ! empty($this->request->params['slug'])) {
-				/**
-				 * Verifica que la categoria exista y tenga productos
-				 */
-				$categoria			= $this->Producto->Categoria->find('first', array(
-					'conditions'		=> array(
-						'Categoria.slug'						=> $this->request->params['slug'],
-						'Categoria.producto_activo_count >'		=> 0
-					)
-				));
-				if ( ! $categoria )
-				{
-					$this->redirect('/');
-				}
-			}
+			if ( ! empty($this->request->data['Producto']['categoria_slug']) && ! empty($this->request->data['Producto']['modelo_slug']) ) {
 
-
-			/**
-			* Obtiene las categorías por la variable de ordenamiento slug
-			*/
-			if ( ! empty($this->request->params['named'])) {
-				/**
-				 * Verifica que la categoria exista y tenga productos
-				 */
-				$categoria			= $this->Producto->Categoria->find('first', array(
-					'conditions'		=> array(
-						'Categoria.slug'						=> $this->request->params['named']['slug'],
-						'Categoria.producto_activo_count >'		=> 0
-					)
-				));
-				if ( ! $categoria )
-				{
-					$this->redirect('/');
-				}
-			}
-
-			/**
-			* Escribe en sessión el modelo que se está consultando
-			*/
-			$this->Session->write('Filtro.modelo',$this->request->data['Producto']['modelo_id']);
-
-
-			/**
-			 * Verifica que las versión exista y tenga productos
-			 */
-			$versiones			= $this->Producto->Version->find('all', array(
-				'conditions'		=> array(
-					'Version.modelo_id'						=> $this->request->data['Producto']['modelo_id'],
-					'Version.producto_activo_count >'		=> 0
-				)
-			));
-			if ( ! $versiones )
-			{
-				$this->redirect('/');
-			}
-
-			$arrayVersiones = array();
-
-			// Arma el arreglo con ids de versiones del modelo consultado
-			foreach ($versiones as $version) {
-				$arrayVersiones[] = $version['Version']['id'];
-			}
-			
-			$paginate		= array_replace_recursive($paginate, array(
-				'contain'		=> array(
-					'Categoria'		=> array(
-						'fields'		=> array(
-							'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
-							'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
-						),
-						'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
-					),
-					'Version'		=> array(
-						'Modelo'		=> array(
-							'fields'		=> array(
-								'Modelo.nombre', 'Modelo.slug'
-							)
-						),
-						'fields'		=> array(
-							'Version.nombre', 'Version.modelo_version', 'Version.slug'
-						)
-					)
-				),
-				'joins'		=> array(
-					array(
-			            'table' => 'categorias_productos',
-			            'alias' => 'CategoriasProductos',
-			            'type'  => 'INNER',
-			            'conditions' => array(
-			                'CategoriasProductos.producto_id = Producto.id',
-			                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
-			            )
-
-		        	),
-		        	array(
-			            'table' => 'versiones_productos',
-			            'alias' => 'VersionesProductos',
-			            'type'  => 'INNER',
-			            'conditions' => array(
-			                'VersionesProductos.producto_id = Producto.id',
-			                'VersionesProductos.version_id' => $arrayVersiones
-			            )
-
-		        	)
-				)
-			));
-
-		}else{
-
-			/**
-			 * Verifica si el listado de productos esta condicionado por categoria y modelo
-			 */
-			if ( ! empty($this->request->params['named']['slug']) && ! empty($this->request->params['named']['modelo']) )
-			{	
+				$this->redirect(array('controller' => 'productos', 'action' => 'index', 'slug' => $this->request->data['Producto']['categoria_slug'], 'model' => $this->request->data['Producto']['modelo_slug']));
 				
-				/**
-				 * Verifica que la categoria exista y tenga productos
-				 */
-				$categoria			= $this->Producto->Categoria->find('first', array(
-					'conditions'		=> array(
-						'Categoria.slug'						=> $this->request->params['named']['slug'],
-						'Categoria.producto_activo_count >'		=> 0
-					)
-				));
-				if ( ! $categoria )
-				{
-					$this->redirect('/');
-				}
-
-
-				/**
-				 * Verifica que las versión exista y tenga productos
-				 */
-				$versiones			= $this->Producto->Version->find('all', array(
-					'conditions'		=> array(
-						'Version.modelo_id'						=> $this->request->params['named']['modelo'],
-						'Version.producto_activo_count >'		=> 0
-					)
-				));
-				if ( ! $versiones )
-				{
-					$this->redirect('/');
-				}
-
-				$arrayVersiones = array();
-
-
-				/**
-				* Arma el arreglo con ids de versiones del modelo consultado
-				*/
-				foreach ($versiones as $version) {
-					$arrayVersiones[] = $version['Version']['id'];
-				}
-
-
-				/**
-				* Escribe en sessión el modelo que se está consultando
-				*/
-				$this->Session->write('Filtro.modelo', $this->request->params['named']['modelo']);
-				
-
-				/**
-				 * Agrega el filtro de categoria a la paginacion
-				 */
-				$paginate		= array_replace_recursive($paginate, array(
-					'contain'		=> array(
-						'Categoria'		=> array(
-							'fields'		=> array(
-								'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
-								'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
-							),
-							'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
-						),
-						'Version'		=> array(
-							'Modelo'		=> array(
-								'fields'		=> array(
-									'Modelo.nombre', 'Modelo.slug'
-								)
-							),
-							'fields'		=> array(
-								'Version.nombre', 'Version.modelo_version', 'Version.slug'
-							)
-						)
-					),
-					'joins'		=> array(
-						array(
-				            'table' => 'categorias_productos',
-				            'alias' => 'CategoriasProductos',
-				            'type'  => 'INNER',
-				            'conditions' => array(
-				                'CategoriasProductos.producto_id = Producto.id',
-				                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
-				            )
-
-			        	),
-			        	array(
-				            'table' => 'versiones_productos',
-				            'alias' => 'VersionesProductos',
-				            'type'  => 'INNER',
-				            'conditions' => array(
-				                'VersionesProductos.producto_id = Producto.id',
-				                'VersionesProductos.version_id' => $arrayVersiones
-				            )
-
-			        	)
-					)
-				));
 			}
-
-
-			/**
-			* Condiciona el orden de los productos por la categoría
-			*/
-			if ( ! empty($this->request->params['named']) ) {
-
-				/**
-				 * Verifica que la categoria exista y tenga productos
-				 */
-				$categoria			= $this->Producto->Categoria->find('first', array(
-					'conditions'		=> array(
-						'Categoria.slug'						=> $this->request->params['named']['slug'],
-						'Categoria.producto_activo_count >'		=> 0
-					)
-				));
-				if ( ! $categoria )
-				{
-					$this->redirect('/');
-				}
-
-
-				/**
-				* Controla el orden de los productos al ser listados por modelo
-				*/
-				if ( $this->Session->read('Filtro.modelo') ) {
-
-					/**
-					 * Verifica que las versión exista y tenga productos
-					 */
-					$versiones			= $this->Producto->Version->find('all', array(
-						'conditions'		=> array(
-							'Version.modelo_id'						=> $this->Session->read('Filtro.modelo'),
-							'Version.producto_activo_count >'		=> 0
-						)
-					));
-					if ( ! $versiones )
-					{
-						$this->redirect('/');
-					}
-
-
-					$arrayVersiones = array();
-
-					// Arma el arreglo con ids de versiones del modelo consultado
-					foreach ($versiones as $version) {
-						$arrayVersiones[] = $version['Version']['id'];
-					}
 					
-					$paginate		= array_replace_recursive($paginate, array(
-						'contain'		=> array(
-							'Categoria'		=> array(
-								'fields'		=> array(
-									'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
-									'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
-								),
-								'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
-							),
-							'Version'		=> array(
-								'Modelo'		=> array(
-									'fields'		=> array(
-										'Modelo.nombre', 'Modelo.slug'
-									)
-								),
-								'fields'		=> array(
-									'Version.nombre', 'Version.modelo_version', 'Version.slug'
-								)
-							)
-						),
-						'joins'		=> array(
-							array(
-					            'table' => 'categorias_productos',
-					            'alias' => 'CategoriasProductos',
-					            'type'  => 'INNER',
-					            'conditions' => array(
-					                'CategoriasProductos.producto_id = Producto.id',
-					                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
-					            )
+			/**
+			* Lista los productos por categoría
+			*/
+			if ( ! empty($this->request->data['Producto']['categoria_slug']) ) {
 
-				        	),
-				        	array(
-					            'table' => 'versiones_productos',
-					            'alias' => 'VersionesProductos',
-					            'type'  => 'INNER',
-					            'conditions' => array(
-					                'VersionesProductos.producto_id = Producto.id',
-					                'VersionesProductos.version_id' => $arrayVersiones
-					            )
+				$this->redirect(array('controller' => 'productos', 'action' => 'index', 'slug' => $this->request->data['Producto']['categoria_slug']));
 
-				        	)
-						)
-					));
-
-				}else{
-
-					/**
-					* Controla el orden de los produtos por categoria
-					*/
-					$paginate		= array_replace_recursive($paginate, array(
-						'contain'		=> array(
-							'Categoria'		=> array(
-								'fields'		=> array(
-									'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
-									'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
-								),
-								'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
-							),
-							'Version'		=> array(
-								'Modelo'		=> array(
-									'fields'		=> array(
-										'Modelo.nombre', 'Modelo.slug'
-									)
-								),
-								'fields'		=> array(
-									'Version.nombre', 'Version.modelo_version', 'Version.slug'
-								)
-							)
-						),
-						'joins'		=> array(
-							array(
-					            'table' => 'categorias_productos',
-					            'alias' => 'CategoriasProductos',
-					            'type'  => 'INNER',
-					            'conditions' => array(
-					                'CategoriasProductos.producto_id = Producto.id',
-					                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
-					            )
-				        	)
-						)
-					));
-				}
 			}
+
+		} else {
 
 
 			/**
 			* Filtro por categoria listando todos los productos
 			*/
 			if ( ! empty($this->request->params['slug']) ) {
-
-				/**
-				* Limpiar filtro
-				*/
-				if ( $this->Session->check('Filtro.modelo') ) {
-					$this->Session->delete('Filtro');
-				}
 
 				/**
 				 * Verifica que la categoria exista y tenga productos
@@ -425,6 +100,272 @@ class ProductosController extends AppController
 					)
 				));
 			}
+
+
+			/**
+			* Filtro por categoría y modelo los productos
+			*/
+			if ( ! empty($this->request->params['slug']) && ! empty($this->request->params['model']) ) {
+
+				/**
+				 * Verifica que la categoria exista y tenga productos
+				 */
+				$categoria			= $this->Producto->Categoria->find('first', array(
+					'conditions'		=> array(
+						'Categoria.slug'						=> $this->request->params['slug'],
+						'Categoria.producto_activo_count >'		=> 0
+					)
+				));
+				if ( ! $categoria )
+				{
+					$this->redirect('/');
+				}
+
+				
+				/**
+				* Verifica que el modelo exista
+				*/
+				$modelo = ClassRegistry::init('Modelo')->find('first', array(
+					'conditions' => array('Modelo.slug' => $this->request->params['model'], 'Modelo.producto_activo_count >'	=> 0),
+					'fields'	=> array('id')
+				));
+				if ( ! $modelo )
+				{
+					$this->redirect('/');
+				}
+
+				
+				/**
+				 * Verifica que las versión exista y tenga productos
+				 */
+				$versiones			= $this->Producto->Version->find('all', array(
+					'conditions'		=> array(
+						'Version.modelo_id'						=> $modelo['Modelo']['id'],
+						'Version.producto_activo_count >'		=> 0
+					)
+				));
+				if ( ! $versiones )
+				{
+					$this->redirect('/');
+				}
+				
+				$arrayVersiones = array();
+
+
+				/**
+				* Arma el arreglo con ids de versiones del modelo consultado
+				*/
+				foreach ($versiones as $version) {
+					$arrayVersiones[] = $version['Version']['id'];
+				}
+
+				/**
+				 * Agrega el filtro de categoria a la paginacion
+				 */
+				$paginate		= array_replace_recursive($paginate, array(
+					'contain'		=> array(
+						'Categoria'		=> array(
+							'fields'		=> array(
+								'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+								'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+							),
+							'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
+						),
+						'Version'		=> array(
+							'Modelo'		=> array(
+								'fields'		=> array(
+									'Modelo.nombre', 'Modelo.slug'
+								),
+							),
+							'fields'		=> array(
+								'Version.nombre', 'Version.modelo_version', 'Version.slug'
+							)
+						)
+					),
+					'joins'		=> array(
+						array(
+				            'table' => 'categorias_productos',
+				            'alias' => 'CategoriasProductos',
+				            'type'  => 'INNER',
+				            'conditions' => array(
+				                'CategoriasProductos.producto_id = Producto.id',
+				                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
+				            )
+
+			        	),
+			        	array(
+				            'table' => 'versiones_productos',
+				            'alias' => 'VersionesProductos',
+				            'type'  => 'INNER',
+				            'conditions' => array(
+				                'VersionesProductos.producto_id = Producto.id',
+				                'VersionesProductos.version_id' => $arrayVersiones
+				            )
+
+			        	)
+					)
+				));
+			}
+
+
+			/**
+			* Ordenar productos dependiendo de la categoría que se está vizualizando
+			*/
+			if ( ! empty($this->request->params['named']['slug']) ) {
+
+				/**
+				 * Verifica que la categoria exista y tenga productos
+				 */
+				$categoria			= $this->Producto->Categoria->find('first', array(
+					'conditions'		=> array(
+						'Categoria.slug'						=> $this->request->params['named']['slug'],
+						'Categoria.producto_activo_count >'		=> 0
+					)
+				));
+				if ( ! $categoria )
+				{
+					$this->redirect('/');
+				}
+
+				
+				/**
+				 * Agrega el filtro de categoria a la paginacion
+				 */
+				$paginate		= array_replace_recursive($paginate, array(
+					'contain'		=> array(
+						'Categoria'		=> array(
+							'fields'		=> array(
+								'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+								'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+							),
+							'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
+						)
+					),
+					'joins'		=> array( 
+							array(
+					            'table' => 'categorias_productos',
+					            'alias' => 'CategoriasProductos',
+					            'type'  => 'INNER',
+					            'conditions' => array(
+					                'CategoriasProductos.producto_id = Producto.id',
+					                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
+					            )
+
+				        	)
+					)
+				));
+			}
+
+
+			/**
+			 * Ordenar productos dependiendo de la categoría y modelo que se está vizualizando
+			 */
+			if ( ! empty($this->request->params['named']['slug']) && ! empty($this->request->params['named']['model']) ) {	
+				
+				/**
+				 * Verifica que la categoria exista y tenga productos
+				 */
+				$categoria			= $this->Producto->Categoria->find('first', array(
+					'conditions'		=> array(
+						'Categoria.slug'						=> $this->request->params['named']['slug'],
+						'Categoria.producto_activo_count >'		=> 0
+					)
+				));
+				if ( ! $categoria )
+				{
+					$this->redirect('/');
+				}
+
+
+				/**
+				* Verifica que el modelo exista
+				*/
+				$modelo = ClassRegistry::init('Modelo')->find('first', array(
+					'conditions' => array('Modelo.slug' => $this->request->params['named']['model'], 'Modelo.producto_activo_count >'	=> 0),
+					'fields'	=> array('id')
+				));
+				if ( ! $modelo )
+				{
+					$this->redirect('/');
+				}
+
+				
+				/**
+				 * Verifica que las versión exista y tenga productos
+				 */
+				$versiones			= $this->Producto->Version->find('all', array(
+					'conditions'		=> array(
+						'Version.modelo_id'						=> $modelo['Modelo']['id'],
+						'Version.producto_activo_count >'		=> 0
+					)
+				));
+				if ( ! $versiones )
+				{
+					$this->redirect('/');
+				}
+				
+				$arrayVersiones = array();
+
+
+				/**
+				* Arma el arreglo con ids de versiones del modelo consultado
+				*/
+				foreach ($versiones as $version) {
+					$arrayVersiones[] = $version['Version']['id'];
+				}
+
+				/**
+				 * Agrega el filtro de categoria a la paginacion
+				 */
+				$paginate		= array_replace_recursive($paginate, array(
+					'contain'		=> array(
+						'Categoria'		=> array(
+							'fields'		=> array(
+								'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+								'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+							),
+							'conditions'	=> array('Categoria.id' => $categoria['Categoria']['id'])
+						),
+						'Version'		=> array(
+							'Modelo'		=> array(
+								'fields'		=> array(
+									'Modelo.nombre', 'Modelo.slug'
+								),
+							),
+							'fields'		=> array(
+								'Version.nombre', 'Version.modelo_version', 'Version.slug'
+							)
+						)
+					),
+					'joins'		=> array(
+						array(
+				            'table' => 'categorias_productos',
+				            'alias' => 'CategoriasProductos',
+				            'type'  => 'INNER',
+				            'conditions' => array(
+				                'CategoriasProductos.producto_id = Producto.id',
+				                'CategoriasProductos.categoria_id' => $categoria['Categoria']['id']
+				            )
+
+			        	),
+			        	array(
+				            'table' => 'versiones_productos',
+				            'alias' => 'VersionesProductos',
+				            'type'  => 'INNER',
+				            'conditions' => array(
+				                'VersionesProductos.producto_id = Producto.id',
+				                'VersionesProductos.version_id' => $arrayVersiones
+				            )
+
+			        	)
+					)
+				));
+			}
+		}
+
+
+		if ( ! isset($categoria)) {
+			$this->redirect('/');
 		}
 
 		$this->paginate		= $paginate;
@@ -561,4 +502,5 @@ class ProductosController extends AppController
 		$this->Session->setFlash('Error al desactivar el registro. Por favor intenta nuevamente.', null, array(), 'danger');
 		$this->redirect(array('action' => 'index'));
 	}
+
 }

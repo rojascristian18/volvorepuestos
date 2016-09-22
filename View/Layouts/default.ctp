@@ -20,25 +20,12 @@
 		<?= $this->fetch('script'); ?>
 	</head>
 	<body>
-		<div class="container">
-			<div id="header">
-				<div class="top">
-					<div class="row">
-						<div class="col-sm-6">logo</div>
-						<div class="col-sm-6">buscador</div>
-					</div>
-				</div>
-				<div class="menu">
-					menu
-				</div>
-			</div>
-			<div id="banners">
-				<div class="row">
-					<div class="col-sm-8">banner</div>
-					<div class="col-sm-4">formulario</div>
-				</div>
-			</div>
-			<?= $this->fetch('content'); ?>
-		</div>
+		
+		<?php echo $this->element('header'); ?>
+		
+		<?= $this->element('alertas'); ?>
+		<?= $this->fetch('content'); ?>
+		
+	
 	</body>
 </html>
