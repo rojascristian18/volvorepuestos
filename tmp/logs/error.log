@@ -2100,3 +2100,522 @@ Stack Trace:
 #3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-22 10:45:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/custom.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 11:05:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/bootstrap-theme.min.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 11:45:09 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [C:\wamp\www\busandtrucks\View\Elements\menu.ctp, line 45]
+2016-09-22 11:45:09 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 45, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 45, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-22 12:09:59 Error: [MissingActionException] Action ConcesionariosController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConcesionariosController',
+  'action' => 'index',
+)
+Request URL: /busandtrucks/concesionarios
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-22 15:00:12 Error: [MissingActionException] Action ProductosController::busqueda() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'busqueda',
+)
+Request URL: /busandtrucks/productos/busqueda
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-22 15:05:50 Error: [MissingActionException] Action ProductosController::asd() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductosController',
+  'action' => 'asd',
+)
+Request URL: /busandtrucks/productos/asd
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-22 15:07:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%asd%    LIMIT 20' at line 1
+Request URL: /busandtrucks/productos/asd
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Product...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Product...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Product...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Producto), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate(NULL, Array, Array)
+#8 C:\wamp\www\busandtrucks\Controller\ProductosController.php(407): Controller->paginate()
+#9 [internal function]: ProductosController->index()
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductosController), Array)
+#11 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#13 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2016-09-22 15:30:25 Error: [MissingControllerException] Controller class MotoresController could not be found.
+Exception Attributes: array (
+  'class' => 'MotoresController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/motores
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 15:53:28 Error: [NotFoundException] Not Found
+Request URL: /busandtrucks/repuestos/page:2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate(NULL, Array, Array)
+#1 C:\wamp\www\busandtrucks\Controller\ProductosController.php(479): Controller->paginate()
+#2 [internal function]: ProductosController->index()
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductosController), Array)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ProductosController), Object(CakeRequest))
+#6 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-09-22 16:02:43 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\busandtrucks\Controller\AppController.php, line 120]
+2016-09-22 16:02:43 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /busandtrucks/repuestos/srch:10
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 120)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 120, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 120, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-22 16:05:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /busandtrucks/admin/banners/add
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `vo...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1024): DboSource->execute('INSERT INTO `vo...')
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(1933): DboSource->create(Object(Banner), Array, Array)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\wamp\www\busandtrucks\Controller\BannersController.php(19): Model->save(Array)
+#6 [internal function]: BannersController->admin_add()
+#7 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BannersController), Array)
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BannersController), Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-22 16:17:30 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in [C:\wamp\www\busandtrucks\Controller\AppController.php, line 118]
+2016-09-22 16:17:30 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+Request URL: /busandtrucks/admin/banner_categorias
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 118)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 118, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 118, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-22 16:18:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Banner.slug' in 'on clause'
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Banner`...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Banner`...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Banner`...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Banner), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\busandtrucks\Controller\AppController.php(122): Model->find('all', Array)
+#7 [internal function]: AppController->beforeRender(Object(CakeEvent))
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(933): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#11 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#12 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-09-22 16:18:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 16:18:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/cake.generic.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 16:18:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 16:30:38 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\busandtrucks\Controller\AppController.php, line 147]
+2016-09-22 16:30:38 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /busandtrucks/repuestos/slug:filtros
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 147)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 147, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 147, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-22 16:35:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Banner`...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Banner`...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Banner`...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Banner), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\busandtrucks\Controller\AppController.php(157): Model->find('all', Array)
+#7 C:\wamp\www\busandtrucks\Controller\CategoriasController.php(17): AppController->getHero('home')
+#8 [internal function]: CategoriasController->index()
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#12 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-09-22 16:35:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Banner`...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Banner`...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Banner`...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Banner), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\busandtrucks\Controller\AppController.php(157): Model->find('all', Array)
+#7 C:\wamp\www\busandtrucks\Controller\CategoriasController.php(17): AppController->getHero('home')
+#8 [internal function]: CategoriasController->index()
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest))
+#12 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-09-22 16:44:08 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/glyphicons-halflings-regular.woff2
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 16:44:10 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/glyphicons-halflings-regular.woff
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 16:44:11 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/fonts/glyphicons-halflings-regular.ttf
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-22 16:49:47 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\busandtrucks\Controller\AppController.php, line 117]
+2016-09-22 16:49:47 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 117, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 117, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-22 17:44:04 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'volvo_repuestos.sitio_paginas_banners' doesn't exist
+Request URL: /busandtrucks/concesionarios
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Banner`...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Banner`...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Banner`...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Banner), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php(151): Model->find('all', Array)
+#7 [internal function]: ConcesionariosController->index()
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ConcesionariosController), Array)
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-09-22 17:44:05 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'volvo_repuestos.sitio_paginas_banners' doesn't exist
+Request URL: /busandtrucks/concesionarios
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Banner`...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Banner`...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Banner`...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Banner), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php(151): Model->find('all', Array)
+#7 [internal function]: ConcesionariosController->index()
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ConcesionariosController), Array)
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-09-22 17:46:44 Error: Fatal Error (1): Class 'BreadcrumbComponent' not found in [C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php, line 82]
+2016-09-22 17:46:44 Error: [FatalErrorException] Class 'BreadcrumbComponent' not found
+Request URL: /busandtrucks/concesionarios
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Breadcru...', 'C:\\wamp\\www\\bus...', 82)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Breadcru...', 'C:\\wamp\\www\\bus...', 82, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'Breadcru...', 'C:\\wamp\\www\\bus...', 82, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 10:21:22 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\busandtrucks\View\Elements\filtro.ctp, line 10]
+2016-09-23 10:21:22 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /busandtrucks/repuestos/slug:filtros/model:fh
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 10, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 10, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 12:35:40 Error: [MissingControllerException] Controller class LeadesController could not be found.
+Exception Attributes: array (
+  'class' => 'LeadesController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 12:59:42 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\wamp\www\busandtrucks\Controller\LeadesController.php, line 59]
+2016-09-23 12:59:42 Error: [FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 59, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 59, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 14:03:15 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\busandtrucks\Controller\LeadesController.php, line 58]
+2016-09-23 14:03:15 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 58)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 58, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 58, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 14:27:04 Error: [MissingTableException] Table sitio_leades for model Lead was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'sitio_leades',
+  'class' => 'Lead',
+  'ds' => 'default',
+)
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3653): Model->setSource('leades')
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(1748): Model->getDataSource()
+#2 C:\wamp\www\busandtrucks\Controller\LeadesController.php(32): Model->save(Array)
+#3 [internal function]: LeadesController->lead()
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LeadesController), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(LeadesController), Object(CakeRequest))
+#7 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2016-09-23 14:27:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/cake.generic.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:27:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:27:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\busandtrucks\Controller\LeadesController.php, line 49]
+2016-09-23 14:27:35 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 49, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 49, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 14:27:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/cake.generic.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:27:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:28:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\busandtrucks\Controller\LeadesController.php, line 43]
+2016-09-23 14:28:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 43, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 43, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 14:28:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/cake.generic.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:28:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:29:10 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\busandtrucks\Controller\LeadesController.php, line 43]
+2016-09-23 14:29:10 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /busandtrucks/leades/lead
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 43, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\bus...', 43, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 14:29:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/cake.generic.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:29:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:29:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/css/cake.generic.css
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:29:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/img/cake.power.gif
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-23 14:37:03 Error: [MissingActionException] Action LeadesController::leades() could not be found.
+Exception Attributes: array (
+  'controller' => 'LeadesController',
+  'action' => 'leades',
+)
+Request URL: /busandtrucks/leades/leades
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(LeadesController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-23 14:37:43 Error: [MissingActionException] Action LeadesController::leades() could not be found.
+Exception Attributes: array (
+  'controller' => 'LeadesController',
+  'action' => 'leades',
+)
+Request URL: /busandtrucks/leades/leades
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(LeadesController), Object(CakeRequest))
+#2 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-23 14:54:18 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 114491385 bytes) in [C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\basics.php, line 279]
+2016-09-23 14:54:18 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 114491385 bytes)
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp\\www\\bus...', 279)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp\\www\\bus...', 279, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp\\www\\bus...', 279, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-23 14:54:52 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 114416936 bytes) in [C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\basics.php, line 279]
+2016-09-23 14:54:52 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 114416936 bytes)
+Request URL: /busandtrucks/
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp\\www\\bus...', 279)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp\\www\\bus...', 279, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp\\www\\bus...', 279, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

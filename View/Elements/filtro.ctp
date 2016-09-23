@@ -1,4 +1,4 @@
-<div class="filtro">
+<div class="filtro-productos">
 	<div class="container">
 		<?= $this->Form->create('Producto', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
 			<div class="row">
@@ -7,14 +7,14 @@
 				</div>
 				<div class="col-sm-3">
 					<?= $this->Form->label('categoria_slug', 'Por categoría'); ?>
-					<?= $this->Form->input('categoria_slug', array('options' => $slugsCategorias)); ?>
+					<?= $this->Form->input('categoria_slug', array('options' => $slugsCategorias, 'empty' => 'Seleccione categoría','class' => 'form-control')); ?>
 				</div>
 				<div class="col-sm-3">
 					<?= $this->Form->label('modelo_slug', 'Por modelo'); ?>
-					<?= $this->Form->input('modelo_slug', array('options' => $slugsModelos, 'empty' => 'Seleccione modelo')); ?>
+					<?= $this->Form->input('modelo_slug', array('options' => $slugsModelos, 'empty' => 'Seleccione modelo', 'class' => 'form-control')); ?>
 				</div>
 				<div class="col-sm-3">
-					<?= $this->Form->submit('Buscar'); ?>
+					<?= $this->Form->submit('Buscar', array('class' => 'btn btn-primary')); ?>
 				</div>
 			</div>
 		<?= $this->Form->end(); ?>

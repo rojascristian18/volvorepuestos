@@ -14,7 +14,7 @@ class Banner extends AppModel
 		/**
 		 * IMAGE UPLOAD
 		 */
-		/*
+		
 		'Image'		=> array(
 			'fields'	=> array(
 				'imagen'	=> array(
@@ -29,7 +29,7 @@ class Banner extends AppModel
 				)
 			)
 		)
-		*/
+		
 	);
 
 	/**

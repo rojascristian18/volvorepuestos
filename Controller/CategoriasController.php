@@ -12,7 +12,11 @@ class CategoriasController extends AppController
 			'conditions'	=> array('Modelo.producto_activo_count >' => 0, 'Modelo.version_activo_count >' => 0)
 			)
 		);
-		$this->set(compact('categorias', 'modelos'));
+
+		// Banners
+		$ListaBanners = $this->getHero('home');
+
+		$this->set(compact('categorias', 'modelos', 'ListaBanners'));
 	}
 
 	public function admin_index()

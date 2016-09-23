@@ -29,6 +29,9 @@ class ProductosController extends AppController
 		);
 
 
+		BreadcrumbComponent::add('Catálogo ');
+
+
 		// Filtrado de productos por formulario
 		if ( $this->request->is('post') ) {
 
@@ -50,8 +53,17 @@ class ProductosController extends AppController
 
 			}
 
-		} else {
+			/**
+			* Busqueda
+			*/
+			if ( ! empty($this->request->data['Producto']['nombre_buscar']) ) {
 
+				$this->redirect(array('controller' => 'productos', 'action' => 'index', 'srch' => $this->request->data['Producto']['nombre_buscar']));
+
+			}
+
+
+		} else {
 
 			/**
 			* Filtro por categoria listando todos los productos
@@ -213,6 +225,8 @@ class ProductosController extends AppController
 			*/
 			if ( ! empty($this->request->params['named']['slug']) ) {
 
+				BreadcrumbComponent::add('<i class="fa fa-angle-right" ></i> ' . $this->request->params['named']['slug']);
+
 				/**
 				 * Verifica que la categoria exista y tenga productos
 				 */
@@ -261,6 +275,8 @@ class ProductosController extends AppController
 			 * Ordenar productos dependiendo de la categoría y modelo que se está vizualizando
 			 */
 			if ( ! empty($this->request->params['named']['slug']) && ! empty($this->request->params['named']['model']) ) {	
+
+				BreadcrumbComponent::add('<i class="fa fa-angle-right" ></i> ' . $this->request->params['named']['model']);
 				
 				/**
 				 * Verifica que la categoria exista y tenga productos
@@ -361,16 +377,129 @@ class ProductosController extends AppController
 					)
 				));
 			}
+
+
+			/**
+			* Busqueda de productos
+			*/
+			if ( ! empty($this->request->params['srch']) ) {
+				
+				$searchResult = $this->Producto->find('all', array(
+					'conditions'	=> array('Producto.nombre LIKE "%' . $this->request->params['srch'] . '%"'),
+					'fields'		=> array('Producto.id')
+					)
+				);
+
+				if (empty($searchResult)) {
+
+					$this->Session->setFlash('No se encontraron resultados para "' . $this->request->params['srch'] . '"' , 'alertas', array(), 'danger');
+
+					$paginate	=  array();
+
+				}else{
+
+					$searchResultIds = array();
+
+					foreach ($searchResult as $product) {
+						$searchResultIds[] = $product['Producto']['id'];
+					}
+					
+					$paginate		= array_replace_recursive($paginate, array(
+						'conditions'	=> array('Producto.id IN ' => $searchResultIds),
+						'contain'		=> array(
+							'Categoria'		=> array(
+								'fields'		=> array(
+									'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+									'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+								)
+							),
+							'Version'		=> array(
+								'Modelo'		=> array(
+									'fields'		=> array(
+										'Modelo.nombre', 'Modelo.slug'
+									)
+								),
+								'fields'		=> array(
+									'Version.nombre', 'Version.modelo_version', 'Version.slug'
+								)
+							)
+						)
+					));
+
+					$this->Session->setFlash( count($searchResult) . ' resultados encontrados para "' . $this->request->params['srch'] . '"' , 'alertas', array(), 'success');
+
+				}
+			}
+
+
+			/**
+			* Orden de productos al buscar
+			*/
+			if ( ! empty($this->request->params['named']['srch']) ) {
+
+				BreadcrumbComponent::add('<i class="fa fa-angle-right" ></i> Búsqueda "' . $this->request->params['named']['srch'] .'"');
+				
+				$searchResult = $this->Producto->find('all', array(
+					'conditions'	=> array('Producto.nombre LIKE "%' . $this->request->params['named']['srch'] . '%"'),
+					'fields'		=> array('Producto.id')
+					)
+				);
+
+				if (empty($searchResult)) {
+
+					$this->Session->setFlash('No se encontraron resultados para "' . $this->request->params['named']['srch'] . '"' , null, array(), 'danger');
+
+					$paginate	= array();
+
+				}else{
+
+					$searchResultIds = array();
+
+					foreach ($searchResult as $product) {
+						$searchResultIds[] = $product['Producto']['id'];
+					}
+					
+					$paginate		= array_replace_recursive($paginate, array(
+						'conditions'	=> array('Producto.id IN ' => $searchResultIds),
+						'contain'		=> array(
+							'Categoria'		=> array(
+								'fields'		=> array(
+									'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+									'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+								)
+							),
+							'Version'		=> array(
+								'Modelo'		=> array(
+									'fields'		=> array(
+										'Modelo.nombre', 'Modelo.slug'
+									)
+								),
+								'fields'		=> array(
+									'Version.nombre', 'Version.modelo_version', 'Version.slug'
+								)
+							)
+						)
+					));
+
+					$this->Session->setFlash( count($searchResult) . ' resultados encontrados para "' . $this->request->params['named']['srch'] . '"' , null, array(), 'success');
+
+				}
+			}
 		}
 
+		// Banners
+		$ListaBanners = $this->getHero('repuestos');
 
-		if ( ! isset($categoria)) {
-			$this->redirect('/');
+		if ( !empty($paginate) ) {
+			$this->paginate		= $paginate;
+			$productos			= $this->paginate();
+		
+			$this->set(compact('categoria', 'productos', 'ListaBanners'));
+		}else{
+			$productos			= array();
+		
+			$this->set(compact('categoria', 'productos', 'ListaBanners'));
 		}
-
-		$this->paginate		= $paginate;
-		$productos			= $this->paginate();
-		$this->set(compact('categoria', 'productos'));
 	}
 
 	public function admin_index()

@@ -1,8 +1,12 @@
 
 <div class="categorias">
 	<div class="container">
-		<h1>Productos</h1>
-		<h2>Repuestos Genuinos</h2>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1 class="titulo">Nuestros Productos</h1>
+				<h2 class="subtitulo">Repuestos Genuinos</h2>
+			</div>
+		</div>
 		<div class="row">
 			<? foreach ( $categorias as $categoria ) : ?>
 			<div class="col-sm-3">
@@ -23,12 +27,13 @@
 								array('class' => 'btn btn-primary', 'escape' => false)
 							); ?>
 						<? endforeach; ?>
-						<label class="atras-filtro"><< Cancelar</label>
 						<?= $this->Html->link(
 							'Ver todos los productos',
 							array('controller' => 'productos', 'action' => 'index', 'slug' => $categoria['Categoria']['slug']),
-							array( 'escape' => false)
+							array( 'escape' => false, 'class' => 'ver-todo')
 						); ?>
+
+						<label class="atras-filtro"><i class="fa fa-arrow-left" aria-hidden="true"></i> Cancelar</label>
 					</div>
 					<div class="caption">
 						<h3><?= h($categoria['Categoria']['nombre']); ?></h3>

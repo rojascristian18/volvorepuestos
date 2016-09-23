@@ -8,12 +8,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<?= $this->Html->meta('favicon.ico', '/favicon.ico', array('type' => 'icon')); ?>
 		<?= $this->Html->css(array(
-			'bootstrap.min', 'sitio'
+			'bootstrap.min',
+			'sitio'
 		)); ?>
 		<?= $this->Html->scriptBlock(sprintf("var webroot = '%s';", $this->webroot)); ?>
 		<?= $this->Html->scriptBlock(sprintf("var fullwebroot = '%s';", $this->Html->url('/', true))); ?>
 		<?= $this->Html->script(array(
-			'jquery.min', 'bootstrap.min', 'app'
+			'jquery-1.11.3.min', 
+			'bootstrap.min',
+			'tagsinput/jquery.tagsinput.min',
+			'jquery.maskedinput.min',
+			'jquery.alphanumeric.pack',
+			'jquery.validate.min',
+			'app',
 		)); ?>
 		<?= $this->fetch('meta'); ?>
 		<?= $this->fetch('css'); ?>
@@ -21,9 +28,20 @@
 	</head>
 	<body>
 		
-		<?php echo $this->element('header'); ?>
+		<?= $this->element('header'); ?>
 		
-		<?= $this->element('alertas'); ?>
+		<div id="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-12 col-xs-12 no-right-pad">
+						<?= $this->element('slider'); ?>
+					</div>
+					<div class="col-md-4 col-sm-12 col-xs-12 no-left-pad">
+						<?= $this->element('formulario-cotizaciones'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?= $this->fetch('content'); ?>
 		
 	

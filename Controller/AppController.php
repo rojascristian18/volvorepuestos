@@ -25,7 +25,14 @@ class AppController extends Controller
 			)
 		),
 		'DebugKit.Toolbar',
-		'Carro'
+		'Carro',
+		'Breadcrumb' => array(
+			'crumbs'		=> array(
+				array('', null),
+				array('Inicio', '/'),
+				array('<i class="fa fa-angle-right" ></i>', null),
+			)
+		)
 		//'Facebook.Connect'	=> array('model' => 'Usuario'),
 		//'Facebook'
 	);
@@ -88,22 +95,45 @@ class AppController extends Controller
 				)),
 				'modelos'			=> ClassRegistry::init('Modelo')->find('all', array(
 					'conditions'		=> array('Modelo.producto_activo_count >' => 0),
-					'fields'			=> array('Modelo.slug', 'Modelo.nombre')
+					'fields'			=> array('Modelo.slug', 'Modelo.nombre','Modelo.id')
 				))
 			);
 
 			$slugsCategorias = array();
 			$slugsModelos	= array();
 
+			// Lista de modelos id
+			$ListaModelos = array();
+
+			// Lista de categorías
 			foreach ($busqueda['categorias'] as $categoria) {
 				$slugsCategorias[$categoria['Categoria']['slug']] = $categoria['Categoria']['nombre'];
 			}
 
+			// Lista de modelos
 			foreach ($busqueda['modelos'] as $modelo) {
 				$slugsModelos[$modelo['Modelo']['slug']] = $modelo['Modelo']['nombre'];
+				$ListaModelos[$modelo['Modelo']['id']] = $modelo['Modelo']['nombre'];
 			}
-		
-			$this->set(compact('slugsCategorias', 'slugsModelos'));
+
+			// Lista de categorías completa
+			$categoriasMenu = ClassRegistry::init('Categoria')->find('all', array(
+					'conditions'		=> array('Categoria.producto_activo_count >' => 0)
+				)
+			);
+
+			// Lista de regiones
+			$ListaRegiones = ClassRegistry::init('Region')->find('list');
+
+			
+			// Camino de migas
+			$breadcrumbs	= BreadcrumbComponent::get();
+			if ( ! empty($breadcrumbs) && count($breadcrumbs) > 2 )
+			{
+				$this->set(compact('breadcrumbs'));
+			}
+
+			$this->set(compact('slugsCategorias', 'slugsModelos', 'categoriasMenu', 'ListaRegiones', 'ListaModelos', 'breadcrumbs'));
 		}
 	}
 
@@ -128,5 +158,28 @@ class AppController extends Controller
 		}
 
 		return true;
+	}
+
+	public function getHero($slug = null) {
+
+		$idCategoria = ClassRegistry::init('BannerCategoria')->find('first', array(
+			'conditions' => array(
+				'BannerCategoria.slug' => $slug
+			)
+		));
+
+		$ListaBanners = array();
+
+		if ( !empty($idCategoria) ) {
+			// Sliders
+			$ListaBanners = ClassRegistry::init('Banner')->find('all', array(
+				'conditions' => array(
+					'Banner.banner_categoria_id' => $idCategoria['BannerCategoria']['id'],
+					'Banner.activo' => 1
+				)
+			));	
+		}
+
+		return $ListaBanners;
 	}
 }
