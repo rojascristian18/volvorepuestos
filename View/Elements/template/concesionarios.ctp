@@ -27,29 +27,19 @@
                 
 
                 
-                <h1>Concesionarios</h1>
+                <h1 class="titulo">Concesionarios</h1>
 
                 <?php  
 
-                    foreach ($ListaConcesionarios as $concesionario) {
-
-                    $titulo         = $concesionario['Concesionario']['nombre'];
-                    $descripcion    = $concesionario['Concesionario']['descripcion'];
-                    $link           = $concesionario['Concesionario']['link'];
-
-                        echo "<div class='col-xs-12 col-sm-4 col-md-4 col-lg-4'>";
-                            if($link!=""){echo "<a href='".$link."' target='_blank'>";}                        
-                                echo '<h2>'.$titulo.'</h2>';
-                                echo '<p><span>>> </span>'.$descripcion.'</p>';
-                            if($link!=""){echo "</a>";}
-                        echo "</div>";  
-
-                
-
-                    }
-
-                ?>
-
+                    foreach ($ListaConcesionarios as $concesionario) : ?>
+                        <div class='col-xs-12 col-sm-4 col-md-4 col-lg-4'>
+                            <?=$this->Html->link(
+                                '<h2>' . $concesionario['Concesionario']['nombre'] . '</h2><p><span>>>> </span>' . $concesionario['Concesionario']['direccion'] . '</p>' , 
+                                array('action' => 'detail', $concesionario['Concesionario']['slug']), 
+                                array('escape' => false)
+                            );?>
+                        </div>
+                <?  endforeach; ?>
          </div> 
 
 

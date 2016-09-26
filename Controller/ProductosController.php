@@ -25,7 +25,8 @@ class ProductosController extends AppController
 						'Version.nombre', 'Version.modelo_version', 'Version.slug'
 					)
 				)
-			)
+			),
+			'limit' => 1
 		);
 
 

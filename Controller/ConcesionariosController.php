@@ -74,6 +74,9 @@ class ConcesionariosController extends AppController
         ); 
 
 
+        BreadcrumbComponent::add('Concecionarios ');
+
+
         $this->set('CFG_PageTitle', 'titulo seo');
         $this->set('CFG_PageDescription', 'sin descripcion');
         $this->set('CFG_PageKeywords', 'key words sin configurar');
@@ -116,6 +119,8 @@ class ConcesionariosController extends AppController
 			}
 		}
 
+		$comunas = $this->Concesionario->Comuna->find('list');
+		$this->set(compact('comunas'));
 	}
 
 	public function admin_edit($id = null)
@@ -182,5 +187,48 @@ class ConcesionariosController extends AppController
 		$Concesionario			= $this->Concesionario->alias;
 
 		$this->set(compact('datos', 'campos', 'Concesionario'));
+	}
+
+
+	public function detail ($slug = null) {
+
+		$concesionario = $this->Concesionario->find('first', array(
+			'conditions' => array(
+				'Concesionario.slug' => $slug,
+				'Concesionario.activo' => 1),
+			'order'	=> array('Concesionario.orden'),
+			'contain'	=> array(
+				'Comuna' => array(
+					'Region' => array('fields' => array('Region.nombre')),
+					'fields' => array('Comuna.nombre')	
+					)
+				)
+			)
+		);
+
+		if (empty($concesionario)) {
+			$this->Session->setFlash('Concecionario no existe.', null, array(), 'danger');
+			$this->redirect(array('action' => 'index'));
+		}
+
+
+        $ListaConcesionarios = $this->Concesionario->find(
+            'all',
+            array (
+                'conditions' => array(
+                    'Concesionario.activo' => 1,
+                ),
+                'order' => array(
+                    'Concesionario.orden' => 'ASC'
+                )
+            )
+        );
+
+        BreadcrumbComponent::add('Concesionarios ', array('controller' => 'concesionarios'));
+
+        BreadcrumbComponent::add('<i class="fa fa-angle-right" ></i> ' . $concesionario['Concesionario']['nombre']);
+
+		$this->set(compact('concesionario','ListaConcesionarios'));
+
 	}
 }

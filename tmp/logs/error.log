@@ -2619,3 +2619,105 @@ Stack Trace:
 #3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-26 09:43:23 Error: Fatal Error (4): syntax error, unexpected ''contain'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php, line 203]
+2016-09-26 09:43:23 Error: [FatalErrorException] syntax error, unexpected ''contain'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /busandtrucks/admin/concesionarios/add
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 203)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 203, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 203, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-26 09:43:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`volvo_repuestos`.`sitio_concesionarios`, CONSTRAINT `FK_CONCESIONARIO_COMUNA` FOREIGN KEY (`comuna_id`) REFERENCES `sitio_comunas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Request URL: /busandtrucks/admin/concesionarios/add
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `vo...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1024): DboSource->execute('INSERT INTO `vo...')
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(1933): DboSource->create(Object(Concesionario), Array, Array)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php(111): Model->save(Array)
+#6 [internal function]: ConcesionariosController->admin_add()
+#7 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ConcesionariosController), Array)
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-09-26 10:20:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /busandtrucks/concesionarios/detail/antofagasta
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Concesi...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Concesi...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Concesi...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Concesionario), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('first', Array)
+#6 C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php(207): Model->find('first', Array)
+#7 [internal function]: ConcesionariosController->detail(Array)
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ConcesionariosController), Array)
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-09-26 10:21:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /busandtrucks/concesionarios/detail/antofagasta
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Concesi...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Concesi...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Concesi...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Concesionario), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('first', Array)
+#6 C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php(207): Model->find('first', Array)
+#7 [internal function]: ConcesionariosController->detail(Array)
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ConcesionariosController), Array)
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-09-26 10:21:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /busandtrucks/concesionarios/detail/antofagasta
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT `Concesi...', Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Concesi...', Array, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Datasource\DboSource.php(1118): DboSource->fetchAll('SELECT `Concesi...', false)
+#4 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Concesionario), Array)
+#5 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Model\Model.php(3003): Model->_readDataSource('first', Array)
+#6 C:\wamp\www\busandtrucks\Controller\ConcesionariosController.php(207): Model->find('first', Array)
+#7 [internal function]: ConcesionariosController->detail(Array)
+#8 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ConcesionariosController), Array)
+#9 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ConcesionariosController), Object(CakeRequest))
+#11 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-09-26 10:22:25 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\busandtrucks\Config\routes.php, line 7]
+2016-09-26 10:22:25 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /busandtrucks/concesionarios/detail/antofagasta
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 7, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 7, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-26 10:22:53 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\busandtrucks\View\Concesionarios\detail.ctp, line 13]
+2016-09-26 10:22:53 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /busandtrucks/concesionarios/detail/antofagasta
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 13, Array)
+#2 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\bus...', 13, Array)
+#3 C:\wamp\www\busandtrucks\Cake\2.7.7\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-26 10:38:23 Error: [MissingControllerException] Controller class ConcecionariosController could not be found.
+Exception Attributes: array (
+  'class' => 'ConcecionariosController',
+  'plugin' => NULL,
+)
+Request URL: /busandtrucks/concecionarios
+Stack Trace:
+#0 C:\wamp\www\busandtrucks\webroot\index.php(86): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

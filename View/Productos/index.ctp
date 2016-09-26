@@ -61,7 +61,6 @@
 					<div class="caption">
 						<h3><?= h($producto['Producto']['nombre']); ?></h3>
 						<div class="ficha">
-							
 								<div class="row">
 									<div class="col-md-4">
 										Categoría:

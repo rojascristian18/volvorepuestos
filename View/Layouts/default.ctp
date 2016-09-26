@@ -44,6 +44,6 @@
 		</div>
 		<?= $this->fetch('content'); ?>
 		
-	
+		<?= $this->element('template/footer'); ?>
 	</body>
 </html>

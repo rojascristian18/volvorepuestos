@@ -663,6 +663,197 @@ div.filtro-productos .btn.btn-primary:hover {
 .productos .thumbnail .caption .acciones .btn-agregar-carro:hover {
 	background-color: #313131;
 }
+
+
+/****************************************************************************************************
+FILTROLEFT
+*/
+
+div#filtroleft{
+    padding: 10px;
+    height: auto;
+    background: #e7e7e7;
+    pointer-events: all;
+    text-align: center;    
+}	
+
+div#filtroleft h2{
+    font-family: "OpenSans Regular";
+    font-size: 127%;
+    color: #4A4C52;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 20px;    
+}
+div#filtroleft .form-control {
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding: 0px 10px;
+    background: #ffffff;
+    border: solid 1px #EDEDED;
+    border-radius: 1px;
+    font-size: 14px;
+    color: #3f3f3f;
+    border: none !important;
+    font-family: "OpenSans Regular";
+    background-color: #fff;
+    box-shadow: none;
+}
+div#filtroleft .btn-default{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #adadad; 
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px 10px;
+    letter-spacing: 2px;    
+}
+div#filtroleft .btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+} 
+
+
+
+
+div#filtroleft ul{
+}
+div#filtroleft ul>li{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding: 0px 10px;
+    border: solid 1px #EDEDED;
+    border-radius: 1px;
+    font-size: 14px;
+    border: none !important;
+    box-shadow: none;   
+}
+div#filtroleft ul>li>a{
+    font-family: "OpenSans Regular";
+    color: #4A4C52;
+
+}
+div#filtroleft ul>li>a:hover{
+    color: #23527c;
+    font-weight: bold;
+    
+}
+div#filtroleft ul>li>a>span{
+    font-weight: bold;
+}
+
+
+/****************************************************************************************************
+CONCESIONARIOS
+*/
+
+div#concesionarios {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#concesionarios div#contenido-concesionarios {
+    background-color: #fff;
+}
+
+
+div#concesionarios div#contenido-concesionarios h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 0px;   
+}
+div#concesionarios div#contenido-concesionarios p{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    /*text-transform: uppercase;*/
+    float: left; 
+    margin-left:0px;  
+}
+div#concesionarios div#contenido-concesionarios p{
+    font-family: "OpenSans Regular";
+    font-size: 13px;
+    color: #4A4C52;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+div#concesionarios div#contenido-concesionarios p span{
+     color: #01547C;
+     font-weight: bold;
+}
+div#concesionarios div#contenido-concesionarios h2{
+    font-family: "OpenSans Regular";
+    font-size: 14px;
+    font-weight: 600;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 10px;
+    /* margin-bottom: 20px!important; */
+}
+
+div#concesionarios div#contenido-concesionarios a{
+    width: 100%;
+    display: block;
+    margin-bottom: 0px;
+}
+
+div#concesionarios div#contenido-concesionarios .titulo{
+    margin-top: 30px;
+}
+
+div#concesionarios div#contenido-concesionarios a:hover h2{
+    font-family: "OpenSans Regular";
+    color: #01547C;
+    font-weight: bold!important;
+}
+
+div#concesionarios div#contenido-concesionarios a:hover p{
+    color: #01547C;
+}
+
+/**
+* Detalle concesionario
+*/
+div#concesionarios div#detalle-concesionario {
+    background-color: #fff;
+}
+
+
+div#concesionarios div#detalle-concesionario h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 0px;   
+}
+div#concesionarios div#detalle-concesionario .table{
+    font-family: "OpenSans light";
+    font-size: 90%;
+}
+
+div#concesionarios div#detalle-concesionario .table tr td, div#concesionarios div#detalle-concesionario .table tr td b{
+	color: #4A4C52;
+}
+
 /**
 * Alertas
 */
@@ -800,6 +991,54 @@ div.tagsinput div {
     z-index: 100;
 }
 /* END tagsinput */
+
+
+/****************************************************************************************************
+FOOTER
+*/
+
+div#footer {
+    width: 100%;
+    height: 180px;
+    position: relative;
+
+}
+div#footer div.top{
+
+    background-color: #eee;
+    font-family: "OpenSans Light";
+    font-size: 12px;
+    line-height: 30px;
+    color: #ffffff;
+    bottom: 0px;
+    z-index: 100;
+    height: 180px;
+}    
+div#footer div.top img{
+    margin-top: 50px;
+}
+div#footer div.midle{
+    background-color: #000;
+    height: 50px;
+    font-family: "OpenSans Light";
+    font-size: 14px;
+    line-height: 50px;
+    color: #ffffff;
+}
+div#footer div.bottom{
+    background-color: #fff;
+    font-family: "OpenSans Light";
+    font-weight: bold;
+    font-size: 12px;
+    height: 100px;
+    line-height: 100px;
+    color: #4A4C52;
+    bottom: 0px;
+    z-index: 100
+}
+div#footer div.bottom img{
+    max-height: 80px;
+}
 
 
 /**
