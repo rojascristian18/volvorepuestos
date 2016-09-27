@@ -44,3 +44,38 @@
 		</div>
 	</div>
 </div>
+
+<div class="concesionarios-home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1 class="titulo">Nuestros Concecionarios</h1>
+			</div>
+		</div>
+		<div class="row">
+			<? foreach ( $concesionarios as $concesionario ) : ?>
+			<div class="col-sm-3">
+				<div class="concesionario-item">
+					<h3><?=$concesionario['Concesionario']['nombre'];?></h3>
+					<address><i class="fa fa-map-marker" aria-hidden="true"></i> <?=$concesionario['Concesionario']['direccion'];?><br />
+					<?=$concesionario['Comuna']['nombre'];?>, <?=$concesionario['Comuna']['Region']['nombre'];?>
+					</address>
+					<i class="fa fa-phone" aria-hidden="true"></i> <?=$concesionario['Concesionario']['telefono'];?>
+					<?=$this->Html->link(
+						'Ver concesionario', array('controller' => 'concesionarios', 'action' => 'detail', $concesionario['Concesionario']['slug']), array('class' => 'btn btn-primary center-block')
+					   );?>
+				</div>
+			</div>
+			<? endforeach; ?>
+			<div class="col-sm-3">
+				<div class="concesionario-item">
+					<h3>Concecionarios</h3>
+					<?=$this->Html->link(
+						'ir a la página', array('controller' => 'concesionarios', 'action' => 'index'), array('class' => 'btn btn-primary center-block')
+					   );?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

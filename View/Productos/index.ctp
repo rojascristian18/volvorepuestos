@@ -7,7 +7,7 @@
 <div class="productos">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-6">
 			<?
 
 			if (isset($categoria)) {
@@ -47,10 +47,22 @@
 				));
 			}
 			?>
-
+			<? if (! empty($productos)) : ?>
 				<div class="ordenar">
 					<label>Ordenar por:</label> <?= $this->Paginator->sort('nombre'); ?> | <?= $this->Paginator->sort('precio'); ?>
 				</div>
+			<? endif; ?>
+			</div>
+			<div class="col-md-6 text-right">
+				<? if (! empty($productos)) { ?>
+					<nav aria-label="Page navigation">
+					  <ul class="pagination pagination-top">
+					    <?= $this->Paginator->prev('<i class="fa fa-angle-left"></i>', array('tag' => 'li','escape' => false), null, array('tag' => 'li', 'disabledTag' => 'a', 'class' => 'first disabled hidden')); ?>
+		                <?= $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'a', 'modulus' => 1, 'currentClass' => 'active', 'separator' => '')); ?>
+		                <?= $this->Paginator->next('<i class="fa fa-angle-right"></i>', array('tag' => 'li','escape' => false), null, array('tag' => 'li', 'disabledTag' => 'a', 'class' => 'last disabled hidden','escape' => false)); ?>
+					  </ul>
+					</nav>
+				<? } ?>
 			</div>
 		</div>
 		<div class="row">
@@ -108,14 +120,19 @@
 			</div>
 			<? endforeach; ?>
 		</div>
-		<? if (! empty($producto)) { ?>
+		<? if (! empty($productos)) { ?>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-6">
+					<div class="ordenar">
+						<label>Ordenar por:</label> <?= $this->Paginator->sort('nombre'); ?> | <?= $this->Paginator->sort('precio'); ?>
+					</div>
+				</div>
+				<div class="col-md-6 text-right">
 					<nav aria-label="Page navigation">
 					  <ul class="pagination">
-					    <?= $this->Paginator->prev('« Anterior', array('tag' => 'li'), null, array('tag' => 'li', 'class' => 'first disabled hidden')); ?>
-					    <?= $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'a', 'modulus' => 2, 'currentClass' => 'active', 'separator' => '')); ?>
-					    <?= $this->Paginator->next('Siguiente »', array('tag' => 'li'), null, array('tag' => 'li', 'disabledTag' => 'a', 'class' => 'last disabled hidden')); ?>
+					    <?= $this->Paginator->prev('<i class="fa fa-angle-left"></i>', array('tag' => 'li','escape' => false), null, array('tag' => 'li', 'disabledTag' => 'a', 'class' => 'first disabled hidden')); ?>
+		                <?= $this->Paginator->numbers(array('tag' => 'li', 'currentTag' => 'a', 'modulus' => 1, 'currentClass' => 'active', 'separator' => '')); ?>
+		                <?= $this->Paginator->next('<i class="fa fa-angle-right"></i>', array('tag' => 'li','escape' => false), null, array('tag' => 'li', 'disabledTag' => 'a', 'class' => 'last disabled hidden','escape' => false)); ?>
 					  </ul>
 					</nav>
 				</div>

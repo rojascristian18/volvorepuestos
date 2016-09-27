@@ -47,7 +47,7 @@ class LeadesController extends AppController
 	}
 
 	private function validates($data) {
-
+		
 		if ( empty($data['Lead']['repuesto']) ) {
 			$data['Lead']['repuesto'] = 'No especificado';
 		}

@@ -1107,11 +1107,13 @@ div#concesionarios div#contenido-concesionarios h2{
 }
 
 div#concesionarios div#contenido-concesionarios a{
-
     width: 100%;
-    height: 100px;
     display: block;
     margin-bottom: 0px;
+    float: left;
+    background-color: #EEEEEE;
+    padding: 5px;
+    box-shadow: 3px 3px 0px #c3c3c3;
 }
 
 div#concesionarios div#contenido-concesionarios a div#titulo{

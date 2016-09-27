@@ -13,10 +13,24 @@ class CategoriasController extends AppController
 			)
 		);
 
+
+		$concesionarios = ClassRegistry::init('Concesionario')->find('all', array(
+			'fields' => array('nombre', 'slug', 'direccion', 'telefono'),
+			'contain' => array(
+				'Comuna' => array(
+					'fields' => array('nombre'),
+					'Region' => array(
+							'fields' => array('nombre')
+						)
+					)
+				)
+			)
+		);	
+
 		// Banners
 		$ListaBanners = $this->getHero('home');
 
-		$this->set(compact('categorias', 'modelos', 'ListaBanners'));
+		$this->set(compact('categorias', 'modelos', 'ListaBanners', 'concesionarios'));
 	}
 
 	public function admin_index()

@@ -21,6 +21,12 @@
 								<th><?= $this->Form->label('nombre', 'Nombre'); ?></th>
 								<td><?= $this->Form->input('nombre', array('placeholder' => 'Nombre')); ?></td>
 							</tr>
+							<? if (!empty($this->request->data['Banner']['imagen'])) : ?>
+								<tr>
+									<th>Imagen actual</th>
+									<td><?= $this->Html->image($this->request->data['Banner']['imagen']['mini']); ?></td>
+								</tr>
+							<? endif;?>
 							<tr>
 								<th><?= $this->Form->label('imagen', 'Imagen'); ?></th>
 								<td><?= $this->Form->input('imagen', array('type' => 'file')); ?></td>

@@ -14,7 +14,8 @@
 		<?= $this->Html->scriptBlock(sprintf("var webroot = '%s';", $this->webroot)); ?>
 		<?= $this->Html->scriptBlock(sprintf("var fullwebroot = '%s';", $this->Html->url('/', true))); ?>
 		<?= $this->Html->script(array(
-			'jquery-1.11.3.min', 
+			'jquery-1.11.3.min',
+			'jquery-ui.min',
 			'bootstrap.min',
 			'tagsinput/jquery.tagsinput.min',
 			'jquery.maskedinput.min',

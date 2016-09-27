@@ -21,6 +21,12 @@
 		                    </a>
 						</div>
 					</div>
+					<div class="buscar clearfix visible-xs">
+						<?= $this->Form->create('Producto', array('action' => 'index', 'inputDefaults' => array('div' => false, 'label' => false))); ?>
+							<?= $this->Form->input('nombre_buscar', array('class' => 'form-control input-buscar', 'placeholder' => 'Ingrese nombre de un producto')); ?>
+							<?= $this->Form->button('<i class="fa fa-search" aria-hidden="true"></i>', array('type' => 'submit', 'escape' => false, 'class' => 'btn btn-buscar')); ?>
+						<?= $this->Form->end(); ?>
+					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="menu-principal">
 						<ul class="nav navbar-nav">
@@ -81,6 +87,15 @@
 	                                $this->Html->link( 
 	                                    'Concesionarios',
 	                                    array('controller' => 'concesionarios', 'action' => 'index'),
+	                                    array('escape' => false)
+	                                );
+	                            ?>
+	                        </li>
+	                        <li class="<?= ($this->Html->menuActivo(array('controller' => 'postventas')) ? 'active' : ''); ?>">
+	                            <?=
+	                                $this->Html->link( 
+	                                    'Post Venta',
+	                                    array('controller' => 'postventas', 'action' => 'index'),
 	                                    array('escape' => false)
 	                                );
 	                            ?>

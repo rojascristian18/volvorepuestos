@@ -102,6 +102,10 @@ div.menu-header nav.navbar {
 	margin-bottom: 0;
 }
 
+div.menu-header nav.navbar div.buscar {
+	padding: 0 !important;
+}
+
 div.menu-header #menu-principal {
 	background-color: #D7D7D7;
 	border-radius: 0;
@@ -203,7 +207,7 @@ div.menu-header .navbar-header .navbar-toggle .icon-bar {
     display: block;
     height: 2px;
     margin: 6px 0;
-    width: 38px;
+    width: 30px;
 }
 
 /**
@@ -225,6 +229,10 @@ div#hero #contenido-slider .item img.slider-image {
 	height: 400px;
 	width: auto;
 	max-width: inherit;
+}
+
+.carousel-control.right, .carousel-control.left {
+	background-image: none;
 }
 
 /****************************************************************************************************
@@ -526,6 +534,66 @@ div.categorias div.filtro .filtro-modelos .atras-filtro:hover {
 	color: #4A4C52;
 }
 
+/**
+* Concesionarios Home
+*/
+.concesionarios-home .titulo {
+    font-size: 180%;
+    text-transform: uppercase;
+    line-height: 180%;
+    margin-bottom: 30px;
+}
+
+.concesionarios-home .subtitulo {
+	font-size: 100%;
+	line-height: 150%;
+	margin: 0;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	color: #BFBFBF;
+}
+
+.concesionarios-home .concesionario-item {
+	background-color: #E7E7E7;
+	padding: 20px;
+	border: 1px solid #D7D7D7;
+	margin-bottom: 25px;
+}
+
+.concesionarios-home .concesionario-item h3 {
+	font-family: 'VolvoBroad';
+	font-size: 200%;
+	display: block;
+}
+
+.concesionarios-home .concesionario-item address {
+	font-size: 78%;
+	color: #4A4C52;
+	display: block;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.concesionarios-home .concesionario-item a{
+	margin: 5px 0;
+	color: #4A4C52;
+}
+
+.concesionarios-home .concesionario-item .btn-primary{
+	background-color: #01547C;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    font-family: 'Opensans Semibold';
+    font-size: 100%;
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+
+.concesionarios-home .concesionario-item .btn-primary:hover {
+	background-color: #313131;
+}
+
 /****************************************************************************************************
 BREADCRUMB
 */
@@ -611,11 +679,15 @@ div.filtro-productos .btn.btn-primary:hover {
 */
 .productos .ordenar {
 	font-size: 100%;
-	float: right;
 }
 
 .productos .ordenar label {
 	font-weight: normal;
+}
+
+.productos .pagination {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .productos .thumbnail .caption h3 {
@@ -786,42 +858,41 @@ div#concesionarios div#contenido-concesionarios p{
     margin-left:0px;  
 }
 div#concesionarios div#contenido-concesionarios p{
-    font-family: "OpenSans Regular";
-    font-size: 13px;
+    font-family: "OpenSans Light";
+    font-size: 100%;
     color: #4A4C52;
     text-align: left;
-    margin-left: 0px;
     margin-top: 5px;
 }
-div#concesionarios div#contenido-concesionarios p span{
+div#concesionarios div#contenido-concesionarios .fa{
      color: #01547C;
-     font-weight: bold;
 }
 div#concesionarios div#contenido-concesionarios h2{
-    font-family: "OpenSans Regular";
-    font-size: 14px;
-    font-weight: 600;
+    font-family: "OpenSans Semibold";
+    font-size: 100%;
     color: #4A4C52;
     text-align: left;
     text-transform: uppercase;
     margin-top: 10px;
-    /* margin-bottom: 20px!important; */
 }
 
 div#concesionarios div#contenido-concesionarios a{
     width: 100%;
-    display: block;
-    margin-bottom: 0px;
+	display: block;
+	margin-bottom: 0px;
+	float: left;
+	background-color: #EEEEEE;
+	padding: 10px;
+	box-shadow: 3px 3px 0px #c3c3c3;
 }
 
 div#concesionarios div#contenido-concesionarios .titulo{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 div#concesionarios div#contenido-concesionarios a:hover h2{
-    font-family: "OpenSans Regular";
     color: #01547C;
-    font-weight: bold!important;
 }
 
 div#concesionarios div#contenido-concesionarios a:hover p{
@@ -854,6 +925,118 @@ div#concesionarios div#detalle-concesionario .table tr td, div#concesionarios di
 	color: #4A4C52;
 }
 
+
+/****************************************************************************************************
+POSTVENTA
+*/
+
+div#postventa {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div#postventa div#contenido-postventa {
+    background-color: #fff;
+}
+
+
+div#postventa div#contenido-postventa h1{
+    font-family: "OpenSans Semibold";
+    font-size: 24px;
+    color: #4A4C52;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 0px;   
+}
+div#postventa div#contenido-postventa p{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    /*text-transform: uppercase;*/
+    float: left; 
+    margin-left:0px;  
+}
+div#postventa div#contenido-postventa p{
+    font-family: "OpenSans Regular";
+    font-size: 13px;
+    color: #4A4C52;
+    text-align: left;
+    /* text-transform: uppercase; */
+    float: left;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+div#postventa div#contenido-postventa p span{
+     color: #01547C;
+     font-weight: bold;
+}
+
+div#postventa div#contenido-postventa .titulo {
+	margin-top: 30px;
+}
+
+div#postventa div#contenido-postventa h2{
+    font-family: "OpenSans Regular";
+    font-size: 14px;
+    font-weight: 600;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px!important;
+}
+
+div#postventa div#contenido-postventa a{
+
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 0px;
+}
+
+div#postventa div#contenido-postventa a div#titulo{
+    font-family: "OpenSans Semibold";
+    font-size: 12px;
+    color: #4A4C52;
+    text-align: left;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 15px;
+}
+
+div#postventa div#contenido-postventa a:hover h2{
+    font-family: "OpenSans Regular";
+    color: #01547C;
+    font-weight: bold!important;
+}
+
+div#postventa div#contenido-postventa a:hover p{
+    color: #01547C;
+}
+
+div#postventa div#contenido-postventa .btn-default{
+    font-family: "VolvoBroad";
+    color: #fff;
+    background-color: #01547C;
+    border-color: #adadad;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px 30px;
+    letter-spacing: 2px;
+}
+div#postventa div#contenido-postventa .btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #adadad;
+}
+
+
 /**
 * Alertas
 */
@@ -881,19 +1064,80 @@ div#concesionarios div#detalle-concesionario .table tr td, div#concesionarios di
 }
 
 .popover .popover-title {
-	color: #4A4C52;
+	color: #4A4C52 !important;
+	background-color: #fff !important;
 	font-family: 'Opensans Light';
-	font-size: 95%;
+	font-size: 90% !important;
+	line-height: 125%;
 }
 
 .popover .popover-content {
 	display: none;
 }
 
+/****************************************************************************************************
+PAGINADOR
+*/
+
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 10px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #919191;
+    text-decoration: none;
+    background-color: none!important;
+    border: none!important;
+    width: auto!important;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #01547C;
+    font-weight: bold;
+    cursor: default;
+    background-color:transparent!important;    
+    border-color: #337ab7;
+}   
+
+.pagination>li>a>i.fa {
+    
+    font-size: 20px;
+    font-weight: bold; 
+}
+
 
 /**
 * Plugins
 */
+
+/* utocomplete */
+
+.ui-helper-hidden-accessible {
+	display: none !important;
+}
+.ui-autocomplete {
+    background: #FFF;
+    border: 1px solid #D5D5D5;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.ui-autocomplete .ui-menu-item {
+    background: #FFF;
+    border-bottom: 1px solid #D5D5D5;
+    line-height: 20px;
+    padding: 8px 15px;
+}
+
+.ui-autocomplete .ui-menu-item:hover {
+	cursor: pointer;
+	background-color: #01547c;
+}
 
 /* tagsinput */
 div.tagsinput {
@@ -1040,6 +1284,23 @@ div#footer div.bottom img{
     max-height: 80px;
 }
 
+.link {
+	cursor: pointer;
+	color: inherit;
+}
+
+.link:hover {
+	color: inherit;
+}
+
+.cotizar {
+	cursor: pointer;
+	color: inherit;
+}
+
+.cotizar:hover {
+	color: inherit;
+}
 
 /**
 * Mobile
@@ -1088,6 +1349,10 @@ div#footer div.bottom img{
 		width: 100%;
 	}
 
+	#header .logo .logo-text .logo-texto-1 {
+	    font-size: 130%;
+	}
+
 	div.menu-header #menu-principal li.custom-dropdown .submenu {
 		background-color: #ffffff;
 	}
@@ -1101,6 +1366,11 @@ div#footer div.bottom img{
 	.popover {
 		width: auto;
 		max-width: 180px;
+	}
+
+	.ui-autocomplete {
+		width: auto !important;
+		right: 15px;
 	}
 }
 

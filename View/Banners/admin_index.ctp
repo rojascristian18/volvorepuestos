@@ -32,7 +32,7 @@
 								<tr>
 									<td><?= $this->Html->link($banner['BannerCategoria']['nombre'], array('controller' => 'banner_categorias', 'action' => 'edit', $banner['BannerCategoria']['id'])); ?></td>
 									<td><?= h($banner['Banner']['nombre']); ?>&nbsp;</td>
-									<td><?= h($banner['Banner']['imagen']); ?>&nbsp;</td>
+									<td><?= $this->Html->image($banner['Banner']['imagen']['mini']); ?>&nbsp;</td>
 									<td><?= h($banner['Banner']['orden']); ?>&nbsp;</td>
 									<td><?= ($banner['Banner']['activo'] ? '<i class="fa fa-check"></i>' : '<i class="fa fa-remove"></i>'); ?>&nbsp;</td>
 									<td>

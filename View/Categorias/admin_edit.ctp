@@ -17,10 +17,22 @@
 								<th><?= $this->Form->label('nombre', 'Nombre'); ?></th>
 								<td><?= $this->Form->input('nombre', array('placeholder' => 'Nombre')); ?></td>
 							</tr>
+							<? if (!empty($this->request->data['Categoria']['imagen'])) : ?>
+								<tr>
+									<th>Imagen actual</th>
+									<td><?= $this->Html->image($this->request->data['Categoria']['imagen']['mini']); ?></td>
+								</tr>
+							<? endif;?>
 							<tr>
 								<th><?= $this->Form->label('imagen', 'Imagen'); ?></th>
 								<td><?= $this->Form->input('imagen', array('type' => 'file')); ?></td>
 							</tr>
+							<? if (!empty($this->request->data['Categoria']['imagen_secundaria'])) : ?>
+								<tr>
+									<th>Imagen secundaria actual</th>
+									<td><?= $this->Html->image($this->request->data['Categoria']['imagen_secundaria']['mini']); ?></td>
+								</tr>
+							<? endif;?>
 							<tr>
 								<th><?= $this->Form->label('imagen_secundaria', 'Imagen secundaria'); ?></th>
 								<td><?= $this->Form->input('imagen_secundaria', array('type' => 'file')); ?></td>

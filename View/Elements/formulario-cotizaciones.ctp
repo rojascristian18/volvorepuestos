@@ -34,7 +34,7 @@
                         'options'   => $ListaRegiones,
                         'multiple'    => false,
                         'class'     => 'form-control',
-                        'empty'     => 'Selecciona ciudad',
+                        'empty'     => 'Selecciona región',
                         'required'
                       )
                     ); ?>                      
@@ -67,10 +67,9 @@
                 
                 <div class="contenedor-btn-enviar">
 
-
-                    <button type="submit" class="animated btn btn-default">ENVIAR</button>
                     <?= $this->Form->input('origen', array('class' => 'hidden')); ?>
-                    <script>window.onload = function() { document.getElementById('LeadOrigen').value = (location.href.match(/rtrk\.cl/i) !== null ? 'ReachLocal' : 'Orgánico'); }</script>
+                    
+                    <button type="submit" class="animated btn btn-default">ENVIAR</button>
 
                 </div>
 

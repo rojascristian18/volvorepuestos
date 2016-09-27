@@ -15,15 +15,17 @@ $.extend({
 
 			$.app.desplazar.init();
 
+			$.app.autocompletarBuscar.init();
+
 			/**
 			* Inicio plugins
 			*/
 			$.app.plugins.feTagsinput();
 
 			$.app.plugins.popover();
-			//$.app.plugins.carro.total();
+
 			$.app.plugins.carro.agregar();
-		},
+		},	
 		step : {
 			init : function(){
 				if ( $('.filtro-modelos').length ) {
@@ -71,9 +73,14 @@ $.extend({
 			},
 			bind :  function(){
 				/**
+				* Definir origen del lead
+				*/
+				document.getElementById('LeadOrigen').value = (location.href.match(/rtrk\.cl/i) !== null ? 'ReachLocal' : 'Orgánico');
+
+				/**
 				 * Enmascaramiento y restriccion de inputs
 				 */
-				$('#LeadNombre, #LeadEmail, #LeadMensaje').alphanumeric({ allow: ' ' });
+				$('#LeadNombre, #LeadMensaje').alphanumeric({ allow: ' ' });
 				$('#LeadTelefono').mask('9 999 9999', { placeholder: 'X' });
 
 				/**
@@ -133,10 +140,50 @@ $.extend({
 				    if (location.href.match(/repuestos/)) {
 				    	$('html, body').animate({
 				    		scrollTop : $('.breadcrums-wrapper').offset().top
-				    	},1800);
+				    	},1200);
 				    }
 				  
 				};
+
+				$('.cotizar').on('click', function(){
+					$('html, body').animate({
+				    		scrollTop : $('#wrapper-formulario').offset().top
+				    	},1000, function(){
+				    		$('#LeadNombre').focus();
+				    	});
+				});
+			}
+		},
+		autocompletarBuscar: {
+			init: function() {
+				if ( $('.input-buscar').length > 0 ) {
+					$.app.autocompletarBuscar.bind();
+				}
+			},
+			bind: function(){	
+				$('.input-buscar').each(function(){
+					var esto = $(this);
+					esto.autocomplete({
+				   	source: function(request, response) {
+				      $.get( webroot + 'productos/autocompletar/' + request.term, function(respuesta){
+
+			                response( $.parseJSON(respuesta) );
+
+				      });
+				    },
+				    open: function(event, ui) {
+				    	
+	                    var autocomplete = $(".ui-autocomplete:visible");
+	                    var oldTop = autocomplete.offset().top;
+	                    var width  = esto.width() + $('.btn-buscar').width() + 24;
+	                    var newTop = oldTop - esto.height() + 25;
+
+	                    autocomplete.css("top", newTop);
+	                    autocomplete.css("width", width);
+	                    autocomplete.css("position", 'absolute');
+	                }
+				});
+				});
 			}
 		},
 		plugins : {
@@ -170,16 +217,16 @@ $.extend({
 							
 							if ($.inArray(producto, arrayValores) == 0) {
 								$(this).popover('show');
-								setTimeout(function(){
+								/*setTimeout(function(){
 									esto.popover('hide');
-								},1500);
+								},1500);*/
 							}
 
 							if ($.inArray(producto, arrayValores) > 0) {
 								$(this).popover('show');
-								setTimeout(function(){
+								/*setTimeout(function(){
 									esto.popover('hide');
-								},1500);
+								},1500);*/
 							}
 
 							if ($.inArray(producto, arrayValores) < 0) {
@@ -187,9 +234,9 @@ $.extend({
 
 								$(this).popover('show');
 								$('.popover .popover-title').text('¡Repuesto agregado!');
-								setTimeout(function(){
+								/*setTimeout(function(){
 									esto.popover('hide');
-								},1500);
+								},1500);*/
 							}
 
 

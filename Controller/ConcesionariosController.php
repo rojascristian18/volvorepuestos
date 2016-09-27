@@ -71,7 +71,10 @@ class ConcesionariosController extends AppController
                     'Regiones.nombre' => 'ASC'
                 )
             )
-        ); 
+        );
+
+        // Banners
+		$ListaBanners = $this->getHero('concesionarios');
 
 
         BreadcrumbComponent::add('Concecionarios ');
@@ -82,7 +85,7 @@ class ConcesionariosController extends AppController
         $this->set('CFG_PageKeywords', 'key words sin configurar');
 
      
-        $this->set(compact( 'ListaCategoriasFiltro', 'ListaConcesionarios', 'ListaRegiones'));
+        $this->set(compact( 'ListaCategoriasFiltro', 'ListaConcesionarios', 'ListaRegiones', 'ListaBanners'));
 
     }
 
@@ -224,11 +227,14 @@ class ConcesionariosController extends AppController
             )
         );
 
+        // Banners
+		$ListaBanners = $this->getHero('concesionarios');
+
         BreadcrumbComponent::add('Concesionarios ', array('controller' => 'concesionarios'));
 
         BreadcrumbComponent::add('<i class="fa fa-angle-right" ></i> ' . $concesionario['Concesionario']['nombre']);
 
-		$this->set(compact('concesionario','ListaConcesionarios'));
+		$this->set(compact('concesionario','ListaConcesionarios','ListaBanners'));
 
 	}
 }

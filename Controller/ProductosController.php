@@ -25,8 +25,7 @@ class ProductosController extends AppController
 						'Version.nombre', 'Version.modelo_version', 'Version.slug'
 					)
 				)
-			),
-			'limit' => 1
+			)
 		);
 
 
@@ -59,7 +58,7 @@ class ProductosController extends AppController
 			*/
 			if ( ! empty($this->request->data['Producto']['nombre_buscar']) ) {
 
-				$this->redirect(array('controller' => 'productos', 'action' => 'index', 'srch' => $this->request->data['Producto']['nombre_buscar']));
+				$this->redirect(array('controller' => 'productos', 'action' => 'index', 'srch' => strtolower($this->request->data['Producto']['nombre_buscar'])) );
 
 			}
 
@@ -459,28 +458,56 @@ class ProductosController extends AppController
 					foreach ($searchResult as $product) {
 						$searchResultIds[] = $product['Producto']['id'];
 					}
-					
-					$paginate		= array_replace_recursive($paginate, array(
-						'conditions'	=> array('Producto.id IN ' => $searchResultIds),
-						'contain'		=> array(
-							'Categoria'		=> array(
-								'fields'		=> array(
-									'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
-									'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
-								)
-							),
-							'Version'		=> array(
-								'Modelo'		=> array(
+
+					if ( count($searchResultIds) == 1 ) {
+						$paginate		= array_replace_recursive($paginate, array(
+							'conditions'	=> array('Producto.id ' => $searchResultIds),
+							'contain'		=> array(
+								'Categoria'		=> array(
 									'fields'		=> array(
-										'Modelo.nombre', 'Modelo.slug'
+										'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+										'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
 									)
 								),
-								'fields'		=> array(
-									'Version.nombre', 'Version.modelo_version', 'Version.slug'
+								'Version'		=> array(
+									'Modelo'		=> array(
+										'fields'		=> array(
+											'Modelo.nombre', 'Modelo.slug'
+										)
+									),
+									'fields'		=> array(
+										'Version.nombre', 'Version.modelo_version', 'Version.slug'
+									)
 								)
 							)
-						)
-					));
+						));
+
+					}else{
+
+						$paginate		= array_replace_recursive($paginate, array(
+							'conditions'	=> array('Producto.id IN ' => $searchResultIds),
+							'contain'		=> array(
+								'Categoria'		=> array(
+									'fields'		=> array(
+										'Categoria.nombre', 'Categoria.slug', 'Categoria.imagen',
+										'Categoria.producto_activo_count', 'Categoria.producto_inactivo_count',
+									)
+								),
+								'Version'		=> array(
+									'Modelo'		=> array(
+										'fields'		=> array(
+											'Modelo.nombre', 'Modelo.slug'
+										)
+									),
+									'fields'		=> array(
+										'Version.nombre', 'Version.modelo_version', 'Version.slug'
+									)
+								)
+							)
+						));
+					}
+					
+					
 
 					$this->Session->setFlash( count($searchResult) . ' resultados encontrados para "' . $this->request->params['named']['srch'] . '"' , null, array(), 'success');
 
@@ -631,6 +658,32 @@ class ProductosController extends AppController
 		}
 		$this->Session->setFlash('Error al desactivar el registro. Por favor intenta nuevamente.', null, array(), 'danger');
 		$this->redirect(array('action' => 'index'));
+	}
+
+
+	public function autocompletar($text = null) {
+
+		if ( ! empty($text) ) {
+			$productos = $this->Producto->find('all', array(
+					'conditions' => array(
+						'Producto.nombre LIKE "%' . $text . '%"' 
+					),
+					'fields' => array('Producto.id', 'Producto.nombre', 'Producto.slug', 'Producto.imagen'),
+					'orderby' => array('Producto.nombre')
+				)
+			);
+
+			$arrayProductos = array();
+
+			foreach ($productos as $indexe => $producto) {
+				$arrayProductos[$indexe]['value'] = $producto['Producto']['nombre'];
+				$arrayProductos[$indexe]['label'] = $producto['Producto']['nombre'];
+			}
+
+			print_r( json_encode($arrayProductos) );
+			exit;
+		}
+
 	}
 
 }

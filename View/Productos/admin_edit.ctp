@@ -29,6 +29,12 @@
 								<th><?= $this->Form->label('precio', 'Precio'); ?></th>
 								<td><?= $this->Form->input('precio', array('placeholder' => 'Precio')); ?></td>
 							</tr>
+							<? if (!empty($this->request->data['Producto']['imagen'])) : ?>
+								<tr>
+									<th>Imagen actual</th>
+									<td><?= $this->Html->image($this->request->data['Producto']['imagen']['mini']); ?></td>
+								</tr>
+							<? endif;?>
 							<tr>
 								<th><?= $this->Form->label('imagen', 'Imagen'); ?></th>
 								<td><?= $this->Form->input('imagen', array('type' => 'file')); ?></td>
